@@ -1,0 +1,29 @@
+ .navbar-nav {
+	width: 100%;
+	text-align: center;
+	margin: 5px 0;
+	li {
+	  float: none;
+	  display: inline-block;		  
+	  a {
+	  	font-size: 15px;
+		color: #979689;	
+	  }
+	}
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #979689;
+	text-transform: uppercase;
+	font-family: $b;
+	&:hover {
+		color: #c87043;
+	}
+}
+.navigation {
+	background: #fff;
+	border-bottom: none;
+	height: 75px;
+	padding: 10px;
+	margin-bottom: 0;
+}

@@ -1,0 +1,34 @@
+$r: 'CirceRegular';
+$b: 'CirceBold';
+$l: 'CirceLight';
+
+@font-face {
+    font-family: 'CirceRegular';
+    src: url('../fonts/CirceRegular.eot');
+    src: url('../fonts/CirceRegular.eot') format('embedded-opentype'),
+         url('../fonts/CirceRegular.woff2') format('woff2'),
+         url('../fonts/CirceRegular.woff') format('woff'),
+         url('../fonts/CirceRegular.ttf') format('truetype'),
+         url('../fonts/CirceRegular.svg#CirceRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'CirceBold';
+    src: url('../fonts/CirceBold.eot');
+    src: url('../fonts/CirceBold.eot') format('embedded-opentype'),
+         url('../fonts/CirceBold.woff2') format('woff2'),
+         url('../fonts/CirceBold.woff') format('woff'),
+         url('../fonts/CirceBold.ttf') format('truetype'),
+         url('../fonts/CirceBold.svg#CirceBold') format('svg');
+}
+
+@font-face {
+    font-family: 'CirceLight';
+    src: url('../fonts/CirceLight.eot');
+    src: url('../fonts/CirceLight.eot') format('embedded-opentype'),
+         url('../fonts/CirceLight.woff2') format('woff2'),
+         url('../fonts/CirceLight.woff') format('woff'),
+         url('../fonts/CirceLight.ttf') format('truetype'),
+         url('../fonts/CirceLight.svg#CirceLight') format('svg');
+}
+

@@ -1,0 +1,90 @@
+.fotorama__arr {
+	width: 52px;
+	height: 52px;
+	background: url("../img/Right-Square-Button Outlineh.png");
+	background-repeat: no-repeat;
+	-webkit-background-size: contain;
+	     -o-background-size: contain;
+	        background-size: contain;
+	
+	&--next {
+		opacity: 0.5!important;
+		display: block!important;
+		transform: none!important;
+		right: 5%;	
+		&:hover {
+			opacity: 1!important;
+		}	
+	}
+	&--prev {
+		opacity: 1!important;
+		display: block!important;
+		transform: none!important;
+		background: url("../img/Right-Square Button Outline.png");
+		background-repeat: no-repeat;
+		left: 5%;
+		-webkit-background-size: contain;
+		     -o-background-size: contain;
+		        background-size: contain;
+		opacity: 0.5!important;
+		&:hover {
+			opacity: 1!important;
+		}
+	}
+
+	&--disabled {
+		display: none!important;
+		opacity: 0!important;
+	}
+}
+
+.fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__arr, 
+.fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__fullscreen-icon {
+	opacity: 1;
+}
+
+.fotorama__wrap--css3.fotorama__wrap--no-controls.fotorama__wrap--slide.fotorama__wrap--toggle-arrows .fotorama__arr--prev {
+	-webkit-transform: none;
+	   -moz-transform: none;
+	    -ms-transform: none;
+	     -o-transform: none;
+	        transform: none;
+}
+
+.fotorama__nav-wrap {
+    margin-top: -12%;
+    height: 60px;
+    margin-bottom: 110px;
+}
+
+.fotorama__dot {
+	@include border-radius(0);
+	border: 0;
+	background-color: #FFF;
+	width: 40px;
+	height: 3px;
+	margin: 0 5px;
+	background-color: #ededed;
+
+}
+	
+.fotorama__nav__frame.fotorama__active .fotorama__dot {
+	width: 40px;
+	height: 3px;
+	background-color: #c94d3f;
+	border: none;	
+}
+
+.fotorama__nav--dots .fotorama__nav__frame {
+    width: inherit;
+    height: 30px;
+}
+
+
+.fotorama__arr {
+	&--prev {
+		.fotorama__arr--disabled {
+			display: none!important;
+		}
+	}
+}

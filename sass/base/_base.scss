@@ -1,3 +1,6 @@
+body {
+	font-family: $r;
+}
 a {
 	text-decoration: none;
 	&:hover, &:focus, &:active{
@@ -10,10 +13,11 @@ ul {
 }
 
 .block_title {
-	color: #fff;
-    font-size: 3.5em;
+	color: #b38543;
+    font-size: 30px;
 	text-align: center;
-	margin-top: 15px;	
+	margin-top: 15px;
+	font-family: $b;
 }
 
 .p0  {
@@ -25,6 +29,10 @@ ul {
 }
 .align-right {
 	text-align: right;
+}
+
+.white {
+	color: #fff;
 }
 
 
