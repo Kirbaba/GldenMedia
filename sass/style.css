@@ -10,6 +10,13 @@
   font-family: 'CirceLight';
   src: url("../fonts/CirceLight.eot");
   src: url("../fonts/CirceLight.eot") format("embedded-opentype"), url("../fonts/CirceLight.woff2") format("woff2"), url("../fonts/CirceLight.woff") format("woff"), url("../fonts/CirceLight.ttf") format("truetype"), url("../fonts/CirceLight.svg#CirceLight") format("svg"); }
+/* font-family: "MyriadProRegular"; */
+@font-face {
+  font-family: "MyriadProRegular";
+  src: url("../fonts/MyriadProRegular/MyriadProRegular.eot");
+  src: url("../fonts/MyriadProRegular/MyriadProRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadProRegular/MyriadProRegular.woff") format("woff"), url("../fonts/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
 .fotorama__arr {
   width: 52px;
   height: 52px;
@@ -98,11 +105,14 @@ ul {
   color: #b38543;
   font-size: 30px;
   text-align: center;
-  margin-top: 15px;
+  margin-top: 25px;
   font-family: "CirceBold"; }
 
 .p0 {
   padding: 0; }
+
+.p5 {
+  padding: 0 5px; }
 
 .align-left {
   text-align: left; }
@@ -113,6 +123,12 @@ ul {
 .white {
   color: #fff; }
 
+@media (min-width: 1920px) {
+  .container {
+    width: 1260px; } }
+@media (min-width: 1200px) {
+  .container {
+    width: 1160px; } }
 .navbar-nav {
   width: 100%;
   text-align: center;
@@ -136,10 +152,24 @@ ul {
   border-bottom: none;
   height: 75px;
   padding: 10px;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  z-index: 9999; }
 
 .header {
-  margin-top: 75px; }
+  margin-top: 75px;
+  position: relative; }
+  .header__logo {
+    position: absolute;
+    top: 15px;
+    right: 75px;
+    z-index: 9; }
+    .header__logo h3 {
+      color: #000;
+      text-transform: uppercase;
+      font-size: 30px;
+      font-family: "MyriadProRegular"; }
+      .header__logo h3 span {
+        color: #B88909; }
   .header__text {
     color: #FFF;
     margin-top: 15%; }
@@ -169,7 +199,107 @@ ul {
       color: #FFF;
       font-size: 8px;
       text-align: center;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      letter-spacing: 2px; }
+  .header:after {
+    content: '';
+    display: block;
+    height: 38%;
+    width: 100%;
+    position: absolute;
+    bottom: -20%;
+    background-image: url("../img/Shape-14.png");
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    z-index: 150; }
+
+.showbill {
+  display: block;
+  position: relative;
+  width: 100%;
+  z-index: 99;
+  background-color: #FFF;
+  padding: 125px 0 100px;
+  top: -10px; }
+  .showbill__item {
+    display: block;
+    position: relative;
+    margin: 25px 0; }
+    .showbill__item--img {
+      width: 100%;
+      height: 115px;
+      background-color: #acacac;
+      -webkit-box-shadow: 0 3px 10px rgba(0, 1, 3, 0.29);
+      -moz-box-shadow: 0 3px 10px rgba(0, 1, 3, 0.29);
+      box-shadow: 0 3px 10px rgba(0, 1, 3, 0.29);
+      overflow: hidden;
+      text-align: center;
+      word-spacing: nowrap;
+      vertical-align: middle; }
+      .showbill__item--img:after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle; }
+      .showbill__item--img img {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 100%;
+        min-height: 100%;
+        vertical-align: middle; }
+    .showbill__item--time {
+      margin-top: 15px; }
+      .showbill__item--time h3 {
+        color: #958362;
+        font-size: 17px;
+        text-align: right;
+        margin-top: 0;
+        text-transform: uppercase;
+        letter-spacing: 1px; }
+        .showbill__item--time h3 span {
+          display: block;
+          font-size: 70px;
+          font-family: "CirceBold"; }
+      .showbill__item--time p {
+        text-align: right;
+        font-size: 13px;
+        color: #65665B;
+        letter-spacing: 1px; }
+    .showbill__item--info {
+      text-align: left;
+      margin-top: 15px;
+      line-height: 75px; }
+      .showbill__item--info h2 {
+        font-family: "CirceBold";
+        font-size: 24px;
+        color: #37392B;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 0;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: normal; }
+      .showbill__item--info p {
+        text-transform: uppercase;
+        color: #7A7B72;
+        font-size: 11px;
+        letter-spacing: 1px;
+        line-height: normal; }
+  .showbill__more {
+    text-align: center;
+    margin: 35px 0; }
+    .showbill__more a {
+      letter-spacing: 2px;
+      text-align: center;
+      margin: 0 auto;
+      font-size: 11px;
+      color: #B38543; }
+      .showbill__more a:hover {
+        color: #dac09c; }
 
 @media only screen and (max-width: 770px) {
   .align-left {

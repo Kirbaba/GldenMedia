@@ -34,4 +34,25 @@
 @mixin text-shadow ($shadow) {
 	text-shadow: $shadow;
 }
+
+@mixin ovf-img {
+	overflow: hidden;
+	text-align: center;
+	word-spacing: nowrap;
+	vertical-align: middle;
+	&:after {
+		content: "";
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+	}
+	img {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		max-width: 100%;
+		min-height: 100%;
+		vertical-align: middle;
+	}
+}
 	

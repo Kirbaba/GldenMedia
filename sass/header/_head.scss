@@ -1,5 +1,21 @@
 .header {
 	margin-top: 75px;
+	position: relative;
+	&__logo {
+		position: absolute;
+		top: 15px;
+		right: 75px;
+		z-index: 9;
+		h3{
+			color: #000;
+			text-transform: uppercase;
+			font-size: 30px;
+			font-family: $mpreg;
+			span {
+				color: #B88909;
+			}
+		}
+	}
 	&__text {
 		color: #FFF;
 		margin-top: 15%;
@@ -33,7 +49,22 @@
 			font-size: 8px;
 			text-align: center;
 			text-transform: uppercase;
-		}
+			letter-spacing: 2px;
+		}		
+	}
+	&:after {
+		content: '';
+		display: block;
+		height: 38%;
+		width: 100%;
+		position: absolute;
+		bottom: -20%;
+		background-image: url('../img/Shape-14.png');
+		background-repeat: no-repeat;
+		-webkit-background-size: contain;
+		     -o-background-size: contain;
+		        background-size: contain;
+		z-index: 150;
 		
 	}
 }

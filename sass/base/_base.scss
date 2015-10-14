@@ -16,7 +16,7 @@ ul {
 	color: #b38543;
     font-size: 30px;
 	text-align: center;
-	margin-top: 15px;
+	margin-top: 25px;
 	font-family: $b;
 }
 
@@ -24,6 +24,9 @@ ul {
 	padding: 0;
 }
 
+.p5  {
+	padding: 0 5px;
+}
 .align-left {
 	text-align: left;
 }
@@ -33,6 +36,17 @@ ul {
 
 .white {
 	color: #fff;
+}
+@media (min-width: 1920px) {
+	.container {
+		width: 1260px;
+	}
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1160px;
+  }
 }
 
 

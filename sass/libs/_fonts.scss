@@ -1,6 +1,7 @@
 $r: 'CirceRegular';
 $b: 'CirceBold';
 $l: 'CirceLight';
+$mpreg: "MyriadProRegular";
 
 @font-face {
     font-family: 'CirceRegular';
@@ -30,5 +31,16 @@ $l: 'CirceLight';
          url('../fonts/CirceLight.woff') format('woff'),
          url('../fonts/CirceLight.ttf') format('truetype'),
          url('../fonts/CirceLight.svg#CirceLight') format('svg');
+}
+
+/* font-family: "MyriadProRegular"; */
+@font-face {
+    font-family: "MyriadProRegular";
+    src: url("../fonts/MyriadProRegular/MyriadProRegular.eot");
+    src: url("../fonts/MyriadProRegular/MyriadProRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MyriadProRegular/MyriadProRegular.woff") format("woff"),
+    url("../fonts/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
 }
 
