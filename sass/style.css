@@ -416,6 +416,81 @@ ul {
     margin-top: 50px;
     display: block; }
 
+.artists {
+  display: block;
+  float: left;
+  position: relative;
+  width: 100%;
+  padding: 50px 0 175px;
+  background-image: url("../img/bg3.png");
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  background-position: 50% 100%;
+  background-repeat: no-repeat; }
+  .artists__item {
+    margin: 25px 0; }
+    .artists__item--img {
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto;
+      width: 268px;
+      height: 268px;
+      -o-background-clip: padding-box;
+      background-clip: padding-box;
+      background-color: #acacac;
+      overflow: hidden;
+      text-align: center;
+      word-spacing: nowrap;
+      vertical-align: middle; }
+      .artists__item--img:after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle; }
+      .artists__item--img img {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 100%;
+        min-height: 100%;
+        vertical-align: middle; }
+    .artists__item--desc {
+      text-align: center;
+      margin-top: 15px;
+      display: block; }
+      .artists__item--desc h4 {
+        text-transform: uppercase;
+        color: #FFF;
+        text-align: center;
+        font-size: 33px;
+        font-family: "CirceBold"; }
+      .artists__item--desc a {
+        color: #FFF;
+        font-size: 14px; }
+      .artists__item--desc--soc {
+        display: block;
+        text-align: center;
+        width: 75px;
+        margin: 25px auto; }
+        .artists__item--desc--soc a {
+          display: block;
+          float: left;
+          font-size: 20px;
+          color: #FFF;
+          margin: 0 10px;
+          -webkit-transition: all 0.5s linear;
+          -moz-transition: all 0.5s linear;
+          -ms-transition: all 0.5s linear;
+          -o-transition: all 0.5s linear;
+          transition: all 0.5s linear; }
+          .artists__item--desc--soc a:hover {
+            color: #C87043; }
+
 @media only screen and (max-width: 770px) {
   .align-left {
     text-align: center; }
