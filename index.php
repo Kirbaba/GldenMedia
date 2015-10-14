@@ -44,34 +44,35 @@
 			<h3><span>GOLDEN</span>MEDIA</h3>
 		</div>
 		<div class="fotorama" data-width="100%"  data-ratio="1400/822" data-fit="cover">
-			<div data-img="<?php bloginfo('template_directory'); ?>/img/Layer-5.png">
-				<div class="header__text">
-					<h4>GOLDEN MEDIA PRESENT</h4>
-					<h1>Rihanna</h1>
-					<h4>НОВЫЙ КОНЦЕРТНЫЙ ТУР ПО РОССИИ И КАЗАХСТАНУ</h4>
-				</div>
-				<div class="header__mouse">
-					<p>КРУТИТЕ МЫШКУ ВНИЗ</p>
-				</div>
-			</div>
-			<div data-img="<?php bloginfo('template_directory'); ?>/img/Layer-5.png">
-			<div class="header__text">
-					<h4>GOLDEN MEDIA PRESENT</h4>
-					<h1>Slide #2</h1>
-					<h4>НОВЫЙ КОНЦЕРТНЫЙ ТУР ПО РОССИИ И КАЗАХСТАНУ</h4>
-				</div>
-				<div class="header__mouse">
-					<p>КРУТИТЕ МЫШКУ ВНИЗ</p>
-				</div></div>
-			<div data-img="<?php bloginfo('template_directory'); ?>/img/Layer-5.png">
-			<div class="header__text">
-					<h4>GOLDEN MEDIA PRESENT</h4>
-					<h1>Slide #3</h1>
-					<h4>НОВЫЙ КОНЦЕРТНЫЙ ТУР ПО РОССИИ И КАЗАХСТАНУ</h4>
-				</div>
-				<div class="header__mouse">
-					<p>КРУТИТЕ МЫШКУ ВНИЗ</p>
-				</div></div>
+			<?= do_shortcode('[index_slider]') ?>
+<!--			<div data-img="--><?php //bloginfo('template_directory'); ?><!--/img/Layer-5.png">-->
+<!--				<div class="header__text">-->
+<!--					<h4>GOLDEN MEDIA PRESENT</h4>-->
+<!--					<h1>Rihanna</h1>-->
+<!--					<h4>НОВЫЙ КОНЦЕРТНЫЙ ТУР ПО РОССИИ И КАЗАХСТАНУ</h4>-->
+<!--				</div>-->
+<!--				<div class="header__mouse">-->
+<!--					<p>КРУТИТЕ МЫШКУ ВНИЗ</p>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--			<div data-img="--><?php //bloginfo('template_directory'); ?><!--/img/Layer-5.png">-->
+<!--			<div class="header__text">-->
+<!--					<h4>GOLDEN MEDIA PRESENT</h4>-->
+<!--					<h1>Slide #2</h1>-->
+<!--					<h4>НОВЫЙ КОНЦЕРТНЫЙ ТУР ПО РОССИИ И КАЗАХСТАНУ</h4>-->
+<!--				</div>-->
+<!--				<div class="header__mouse">-->
+<!--					<p>КРУТИТЕ МЫШКУ ВНИЗ</p>-->
+<!--				</div></div>-->
+<!--			<div data-img="--><?php //bloginfo('template_directory'); ?><!--/img/Layer-5.png">-->
+<!--			<div class="header__text">-->
+<!--					<h4>GOLDEN MEDIA PRESENT</h4>-->
+<!--					<h1>Slide #3</h1>-->
+<!--					<h4>НОВЫЙ КОНЦЕРТНЫЙ ТУР ПО РОССИИ И КАЗАХСТАНУ</h4>-->
+<!--				</div>-->
+<!--				<div class="header__mouse">-->
+<!--					<p>КРУТИТЕ МЫШКУ ВНИЗ</p>-->
+<!--				</div></div>-->
 		</div>
 	</header>
 
@@ -166,5 +167,14 @@
 	</section>
     
 <?php wp_footer(); ?>
+
+<!--	--><?php //echo get_theme_mod('fb_textbox'); ?>
+<!--	--><?php //echo get_theme_mod('tw_textbox'); ?>
+<!--	--><?php //echo get_theme_mod('vk_textbox'); ?>
+<!--	--><?php //echo get_theme_mod('pi_textbox'); ?>
+<!--	--><?php //echo get_theme_mod('gp_textbox'); ?>
+<!--	--><?php //echo get_theme_mod('dr_textbox'); ?>
+<!--	--><?php //echo get_theme_mod('li_textbox'); ?>
+
 </body>
 </html>

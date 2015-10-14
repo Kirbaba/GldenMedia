@@ -237,3 +237,313 @@ function index_partners_sc(){
 add_shortcode('index_partners','index_partners_sc');
 
 /*--------------------END PARTNERS-----------------------------*/
+
+/*--------------------THEME OPTIONS----------------------------*/
+
+add_action('customize_register', function($customizer){
+    /*Меню настройки контактов*/
+    $customizer->add_section(
+        'contacts_section',
+        array(
+            'title' => 'Настройки контактов',
+            'description' => 'Контакты',
+            'priority' => 35,
+        )
+    );
+
+    $customizer->add_control(
+        'phone_textbox',
+        array(
+            'label' => 'Телефон',
+            'section' => 'contacts_section',
+            'type' => 'text',
+        )
+    );
+    $customizer->add_control(
+        'address_textbox',
+        array(
+            'label' => 'Адрес',
+            'section' => 'contacts_section',
+            'type' => 'text',
+        )
+    );
+    $customizer->add_control(
+        'mail_textbox',
+        array(
+            'label' => 'Email',
+            'section' => 'contacts_section',
+            'type' => 'text',
+        )
+    );
+
+    $customizer->add_setting(
+        'address_textbox',
+        array('default' => 'Москва, Садовническая улица,76/71')
+    );
+    $customizer->add_setting(
+        'mail_textbox',
+        array('default' => 'info@medialand.su')
+    );
+    $customizer->add_setting(
+        'phone_textbox',
+        array('default' => '+7 495 975 6995')
+    );
+
+    /*меню настройки соц сетей*/
+    $customizer->add_section(
+        'social_section',
+        array(
+            'title' => 'Соц. сети',
+            'description' => 'Ссылки на соц. сети',
+            'priority' => 35,
+        )
+    );
+
+    $customizer->add_setting(
+        'tw_textbox',
+        array('default' => 'http://twitter.com/')
+    );
+    $customizer->add_setting(
+        'vk_textbox',
+        array('default' => 'http://vk.com/')
+    );
+    $customizer->add_setting(
+        'fb_textbox',
+        array('default' => 'http://facebook.com/')
+    );
+    $customizer->add_setting(
+        'pi_textbox',
+        array('default' => 'http://pinterest.com/')
+    );
+    $customizer->add_setting(
+        'in_textbox',
+        array('default' => 'http://linkedin.com/')
+    );
+    $customizer->add_setting(
+        'dr_textbox',
+        array('default' => 'http://dribbble.com/')
+    );
+    $customizer->add_setting(
+        'gp_textbox',
+        array('default' => 'http://plus.google.com/')
+    );
+
+
+    $customizer->add_control(
+        'vk_textbox',
+        array(
+            'label' => 'VKontakte',
+            'section' => 'social_section',
+            'type' => 'text',
+        )
+    );
+    $customizer->add_control(
+        'fb_textbox',
+        array(
+            'label' => 'Facebook',
+            'section' => 'social_section',
+            'type' => 'text',
+        )
+    );
+    $customizer->add_control(
+        'in_textbox',
+        array(
+            'label' => 'LinkedIn',
+            'section' => 'social_section',
+            'type' => 'text',
+        )
+    );
+    $customizer->add_control(
+        'gp_textbox',
+        array(
+            'label' => 'Google+',
+            'section' => 'social_section',
+            'type' => 'text',
+        )
+    );
+    $customizer->add_control(
+        'pi_textbox',
+        array(
+            'label' => 'Pinterest',
+            'section' => 'social_section',
+            'type' => 'text',
+        )
+    );
+    $customizer->add_control(
+        'dr_textbox',
+        array(
+            'label' => 'Dribbble',
+            'section' => 'social_section',
+            'type' => 'text',
+        )
+    );
+    $customizer->add_control(
+        'tw_textbox',
+        array(
+            'label' => 'Twitter',
+            'section' => 'social_section',
+            'type' => 'text',
+        )
+    );
+});
+
+/*------------------END THEME OPTIONS--------------------------*/
+
+
+/*------------------OUR ARTISTS--------------------------------*/
+
+add_action('init', 'my_custom_init_artists');
+function my_custom_init_artists()
+{
+    $labels = array(
+        'name' => 'Артисты', // Основное название типа записи
+        'singular_name' => 'Артист', // отдельное название записи типа Book
+        'add_new' => 'Добавить артиста',
+        'add_new_item' => 'Добавить нового артиста',
+        'edit_item' => 'Редактировать артиста',
+        'new_item' => 'Новый артист',
+        'view_item' => 'Посмотреть артиста',
+        'search_items' => 'Найти артиста',
+        'not_found' => 'Артистов не найдено',
+        'not_found_in_trash' => 'В корзине артистов не найдено',
+        'parent_item_colon' => '',
+        'menu_name' => 'Артисты'
+
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => false,
+        'menu_position' => null,
+        'supports' => array('title', 'editor', 'thumbnail')
+    );
+    register_post_type('artists', $args);
+}
+
+function my_extra_fields_artists()
+{
+    add_meta_box('extra_fb', 'Facebook', 'extra_fields_fb_func', 'artists', 'normal', 'high');
+    add_meta_box('extra_tw', 'Twitter', 'extra_fields_tw_func', 'artists', 'normal', 'high');
+}
+
+add_action('add_meta_boxes', 'my_extra_fields_artists', 1);
+
+function extra_fields_fb_func($post)
+{
+    ?>
+    <p><span>Ссылка на Facebook</span><input type='text' name='extra[fb]'
+                                                value='<?php echo get_post_meta($post->ID, "fb", 1); ?>'
+                                                style='width:50%'/></p>
+    <?php
+}
+
+function extra_fields_tw_func($post)
+{
+    ?>
+    <p><span>Ссылка на Twitter</span><input type='text' name='extra[tw]'
+                                             value='<?php echo get_post_meta($post->ID, "tw", 1); ?>'
+                                             style='width:50%'/></p>
+    <?php
+}
+
+add_action('save_post', 'my_extra_fields_update', 10, 1);
+
+/* Сохраняем данные, при сохранении поста */
+function my_extra_fields_update($post_id)
+{
+
+    if (!isset($_POST['extra'])) return false;
+    foreach ($_POST['extra'] as $key => $value) {
+        if (empty($value)) {
+            delete_post_meta($post_id, $key); // удаляем поле если значение пустое
+            continue;
+        }
+
+        update_post_meta($post_id, $key, $value); // add_post_meta() работает автоматически
+    }
+    return $post_id;
+}
+
+/*----------------END OUR ARTISTS------------------------------*/
+
+/*------------------POSTER--------------------------------*/
+
+add_action('init', 'my_custom_init_poster');
+function my_custom_init_poster()
+{
+    $labels = array(
+        'name' => 'Афиша', // Основное название типа записи
+        'singular_name' => 'Событие', // отдельное название записи типа Book
+        'add_new' => 'Добавить событие',
+        'add_new_item' => 'Добавить новое событие',
+        'edit_item' => 'Редактировать событие',
+        'new_item' => 'Новое событие',
+        'view_item' => 'Посмотреть событие',
+        'search_items' => 'Найти событие',
+        'not_found' => 'Событий не найдено',
+        'not_found_in_trash' => 'В корзине событий не найдено',
+        'parent_item_colon' => '',
+        'menu_name' => 'Афиша'
+
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => false,
+        'menu_position' => null,
+        'supports' => array('title', 'thumbnail')
+    );
+    register_post_type('poster', $args);
+}
+
+function my_extra_fields_poster()
+{
+    add_meta_box('extra_address', 'Место: ', 'extra_fields_address_func', 'poster', 'normal', 'high');
+    add_meta_box('extra_bg_date', 'Дата начала: ', 'extra_fields_date_func', 'poster', 'normal', 'high');
+    add_meta_box('extra_bg_time', 'Время начала: ', 'extra_fields_time_func', 'poster', 'normal', 'high');
+}
+
+add_action('add_meta_boxes', 'my_extra_fields_poster', 1);
+
+function extra_fields_address_func($post)
+{
+    ?>
+    <p><span>Место события:</span><input type='text' name='extra[address]'
+                                        value='<?php echo get_post_meta($post->ID, "address", 1); ?>'
+                                        style='width:100%'/></p>
+    <?php
+}
+
+function extra_fields_date_func($post)
+{
+    ?>
+    <p><span>Дата события:</span><input type='date' name='extra[bg_date]'
+                                             value='<?php echo get_post_meta($post->ID, "bg_date", 1); ?>'
+                                             style='width:100%'/></p>
+    <?php
+}
+
+function extra_fields_time_func($post)
+{
+    ?>
+    <p><span>Время начала: </span><input type='text' name='extra[bg_time]'
+                                            value='<?php echo get_post_meta($post->ID, "bg_time", 1); ?>'
+                                            style='width:100%'/></p>
+    <?php
+}
+
+/*----------------END POSTER------------------------------*/
