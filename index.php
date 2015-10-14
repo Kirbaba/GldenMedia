@@ -376,35 +376,34 @@
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 							<div class="contacts__item">
 								<i class="fa fa-map-marker"></i>
-								<p>Москва, 115035,<br>
-								 ул. Садовническая, 76/71</p>
+								<p><?= get_theme_mod('address_textbox'); ?></p>
 							</div>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 							<div class="contacts__item">
 								<i class="fa fa-envelope-o"></i>
-								<p>info@goldenmedia.ru</p>
+								<p><?= get_theme_mod('mail_textbox'); ?></p>
 							</div>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 							<div class="contacts__item">
 								<i class="fa fa-phone"></i>
-								<h4>+ 7 495 975 6995</h4>
+								<h4><?= get_theme_mod('phone_textbox'); ?></h4>
 							</div>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-							<input type="text" class="contacts--input" placeholder="Ваше имя">
+							<input type="text" class="contacts--input" placeholder="Ваше имя" name="contact-name">
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-							<input type="text" class="contacts--input" placeholder="E-mail">
+							<input type="text" class="contacts--input" placeholder="E-mail" name="contact-mail">
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-							<input type="text" class="contacts--input" placeholder="Телефон">
+							<input type="text" class="contacts--input" placeholder="Телефон" name="contact-phone">
 						</div>
 						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-							<textarea name="" id="" class="contacts--text" placeholder="Сообщение"></textarea>
+							<textarea id="" class="contacts--text" placeholder="Сообщение" name="contact-text"></textarea>
 						</div>
 						<div class="row">
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -447,7 +446,13 @@
 			decimalPoint = ',',
 			isRtl = 0;
 	</script>
-
+	<div class="modal fade modal-thank" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+		<div class="modal-dialog modal-md">
+			<div class="modal-content">
+				<p><b>Спасибо!</b> Ваще сообщение отправлено!</p>
+			</div>
+		</div>
+	</div>
 <?php wp_footer(); ?>
 
 <!--	--><?php //echo get_theme_mod('fb_textbox'); ?>

@@ -254,6 +254,18 @@ add_action('customize_register', function($customizer){
             'priority' => 35,
         )
     );
+    $customizer->add_setting(
+        'address_textbox',
+        array('default' => 'Москва, Садовническая улица,76/71')
+    );
+    $customizer->add_setting(
+        'mail_textbox',
+        array('default' => 'info@medialand.su')
+    );
+    $customizer->add_setting(
+        'phone_textbox',
+        array('default' => '+7 495 975 6995')
+    );
 
     $customizer->add_control(
         'phone_textbox',
@@ -280,18 +292,7 @@ add_action('customize_register', function($customizer){
         )
     );
 
-    $customizer->add_setting(
-        'address_textbox',
-        array('default' => 'Москва, Садовническая улица,76/71')
-    );
-    $customizer->add_setting(
-        'mail_textbox',
-        array('default' => 'info@medialand.su')
-    );
-    $customizer->add_setting(
-        'phone_textbox',
-        array('default' => '+7 495 975 6995')
-    );
+
 
     /*меню настройки соц сетей*/
     $customizer->add_section(
@@ -331,7 +332,6 @@ add_action('customize_register', function($customizer){
         'gp_textbox',
         array('default' => 'http://plus.google.com/')
     );
-
 
     $customizer->add_control(
         'vk_textbox',
@@ -389,6 +389,9 @@ add_action('customize_register', function($customizer){
             'type' => 'text',
         )
     );
+
+
+
 });
 
 /*------------------END THEME OPTIONS--------------------------*/
@@ -635,3 +638,35 @@ add_action('wp_ajax_nopriv_more_news', 'news_sc');
 add_action('wp_ajax_more_news', 'news_sc');
 
 /*-----------------END NEWS-------------------------------*/
+
+/*-----------------FEEDBACK-------------------------------*/
+
+// ajax actions
+add_action('wp_ajax_nopriv_send_feedback', 'send_feedback');
+add_action('wp_ajax_send_feedback', 'send_feedback');
+
+//отправка письма
+function send_feedback(){
+
+    $name = $_POST['name'];
+    $mail = $_POST['mail'];
+    $phone = $_POST['phone'];
+    $text = $_POST['text'];
+
+    $admin_email = get_option('admin_email');
+
+    $str = "С вашего сайта пришло сообщение:<br>";
+
+    $str .= 'Имя: '.$name.' <br>';
+    $str .= 'Email: '.$mail.' <br>';
+    $str .= 'Телефон для связи: '.$phone.' <br>';
+    $str .= 'Текст сообщения : '.$text.' <br>';
+
+    mail($admin_email, "Обратная связь",
+        $str,
+        "Content-type: text/html; charset=UTF-8\r\n");
+    die();
+}
+
+/*----------------END FEEDBACK----------------------------*/
+

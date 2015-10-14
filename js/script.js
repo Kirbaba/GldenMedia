@@ -85,5 +85,27 @@ jQuery(document).ready(function(){
         });
         return false;
     });
+
+    //Контакт форм
+    jQuery(document).on('click','.contacts--sub', function(){
+        var name = jQuery('input[name="contact-name"]').val();
+        var mail = jQuery('input[name="contact-mail"]').val();
+        var phone = jQuery('input[name="contact-phone"]').val();
+        var text = jQuery('textarea[name="contact-text"]').val();
+
+        jQuery.ajax({
+            url: ajaxurl, //url, к которому обращаемся
+            type: "POST",
+            data: "action=send_feedback&name=" +name+"&mail=" +mail+"&phone=" +phone+"&text=" +text, //данные, которые передаем. Обязательно для action указываем имя нашего хука
+            success: function(data){
+                jQuery('.modal-thank').modal('show');
+                jQuery('input[name="contact-name"]').val("");
+                jQuery('input[name="contact-mail"]').val("");
+                jQuery('input[name="contact-phone"]').val("");
+                jQuery('textarea[name="contact-text"]').val("");
+            }
+        });
+        return false;
+    });
 });
 
