@@ -106,8 +106,10 @@ ul {
   font-size: 30px;
   text-align: center;
   margin-top: 25px;
+  margin-bottom: 25px;
   text-transform: uppercase;
-  font-family: "CirceBold"; }
+  font-family: "CirceBold";
+  display: block; }
 
 .p0 {
   padding: 0; }
@@ -130,6 +132,14 @@ ul {
 @media (min-width: 1200px) {
   .container {
     width: 1160px; } }
+.col7 {
+  display: block;
+  float: left;
+  padding: 0 15px;
+  position: relative;
+  width: 14.28571%;
+  min-height: 1px; }
+
 .navbar-nav {
   width: 100%;
   text-align: center;
@@ -428,7 +438,8 @@ ul {
   -o-background-size: 100%;
   background-size: 100%;
   background-position: 50% 100%;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  z-index: 2; }
   .artists__item {
     margin: 25px 0; }
     .artists__item--img {
@@ -489,7 +500,23 @@ ul {
           -o-transition: all 0.5s linear;
           transition: all 0.5s linear; }
           .artists__item--desc--soc a:hover {
-            color: #C87043; }
+            color: #41588E; }
+
+.partners {
+  display: block;
+  float: left;
+  width: 100%;
+  position: relative;
+  background-image: url("../img/bg4-1.png");
+  padding: 150px 0 50px;
+  margin-top: -130px;
+  z-index: 0; }
+  .partners__item {
+    margin: 25px 0; }
+    .partners__item img {
+      width: 80%;
+      margin: 0 auto;
+      display: block; }
 
 @media only screen and (max-width: 770px) {
   .align-left {

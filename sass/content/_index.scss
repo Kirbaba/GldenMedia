@@ -211,6 +211,7 @@
 	        background-size: 100%;
 	background-position: 50% 100%;
 	background-repeat: no-repeat;
+	z-index: 2;
 	&__item {
 		margin: 25px 0;
 		&--img {
@@ -252,10 +253,29 @@
 					margin: 0 10px;
 					@include transition(0.5s);
 					&:hover {
-						color: #C87043;
+						color: #41588E;
 					}
 				}
 			}
+		}
+	}
+}
+
+.partners {
+	display: block;
+	float: left;
+	width: 100%;
+	position: relative;
+	background-image: url('../img/bg4-1.png');
+	padding: 150px 0 50px;
+	margin-top: -130px;
+	z-index: 0;
+	&__item {
+		margin: 25px 0;
+		img {
+			width: 80%;
+			margin: 0 auto;
+			display: block;
 		}
 	}
 }

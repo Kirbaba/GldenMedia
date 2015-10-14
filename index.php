@@ -286,6 +286,63 @@
 			</div>
 		</div>
 	</section>
+
+	<section class="partners">
+		<div class="container">
+			<div class="row">
+				<h1 class="block_title">ПАРТНЕРЫ</h1>
+				<div class="col7">
+					<div class="partners__item">
+						<a href="#">
+							<img src="<?php bloginfo('template_directory'); ?>/img/cdland.png" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="col7">
+					<div class="partners__item">
+						<a href="#">
+							<img src="<?php bloginfo('template_directory'); ?>/img/rayarena.png" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="col7">
+					<div class="partners__item">
+						<a href="#">
+							<img src="<?php bloginfo('template_directory'); ?>/img/concertru.png" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="col7">
+					<div class="partners__item">
+						<a href="#">
+							<img src="<?php bloginfo('template_directory'); ?>/img/kasirru.png" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="col7">
+					<div class="partners__item">
+						<a href="#">
+							<img src="<?php bloginfo('template_directory'); ?>/img/russia1.png" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="col7">
+					<div class="partners__item">
+						<a href="#">
+							<img src="<?php bloginfo('template_directory'); ?>/img/muztv.png" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="col7">
+					<div class="partners__item">
+						<a href="#">
+							<img src="<?php bloginfo('template_directory'); ?>/img/izv.png" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
     
 <?php wp_footer(); ?>
 
