@@ -1,7 +1,7 @@
 
 /*-------------GOOGLE MAPS-----------------*/
 
-/*function initialize() {
+function initialize() {
 
     var myLatlng = new google.maps.LatLng(59.934602, 30.334607);
     var mapOptions = {
@@ -27,7 +27,7 @@ function loadScript() {
 }
 
 window.onload = loadScript;
-*/
+
 
 
 jQuery(function() {

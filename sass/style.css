@@ -525,6 +525,88 @@ ul {
       top: 50%;
       transform: translateY(-50%); }
 
+.contacts {
+  display: block;
+  float: left;
+  position: relative;
+  width: 100%;
+  padding: 75px 0 150px; }
+  .contacts__map {
+    height: 310px;
+    margin-bottom: 50px; }
+  .contacts__item {
+    margin: 25px 0;
+    text-align: center;
+    font-family: "MyriadProRegular"; }
+    .contacts__item i {
+      font-size: 50px;
+      height: 55px;
+      color: #B38543;
+      margin-bottom: 25px; }
+    .contacts__item p {
+      font-size: 18px;
+      color: #989898; }
+    .contacts__item h4 {
+      font-size: 28px;
+      color: #989898;
+      margin: 0; }
+  .contacts--input {
+    display: block;
+    width: 100%;
+    color: #80786E;
+    height: 51px;
+    border: 1px solid #cacaca;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    -o-background-clip: padding-box;
+    background-clip: padding-box;
+    outline: none;
+    padding: 0 15px;
+    font-size: 21px; }
+  .contacts--text {
+    color: #80786E;
+    display: block;
+    width: 100%;
+    border: 1px solid #cacaca;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    -o-background-clip: padding-box;
+    background-clip: padding-box;
+    outline: none;
+    height: 240px;
+    resize: none;
+    margin: 15px 0;
+    padding: 15px;
+    font-size: 21px; }
+  .contacts--sub {
+    display: block;
+    margin: 25px auto;
+    color: #fff;
+    font-family: "Circe";
+    font-size: 21px;
+    width: 220px;
+    height: 56px;
+    -webkit-border-radius: 4px/4px 4px 4px 4px;
+    -moz-border-radius: 4px/4px 4px 4px 4px;
+    -ms-border-radius: 4px/4px 4px 4px 4px;
+    border-radius: 4px/4px 4px 4px 4px;
+    -o-background-clip: padding-box;
+    background-clip: padding-box;
+    background-color: #a0844a;
+    outline: none;
+    border: none;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear; }
+    .contacts--sub:hover, .contacts--sub:active, .contacts--sub:focus {
+      background-color: #7d673a; }
+
 @media only screen and (max-width: 770px) {
   .align-left {
     text-align: center; }

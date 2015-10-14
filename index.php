@@ -350,6 +350,63 @@
 			</div>
 		</div>
 	</section>
+
+	<section class="contacts">
+		<div class="container-fluid">
+			<div class="row">
+				<h1 class="block_title">КОНТАКТЫ</h1>
+				<article class="contacts__map">
+					<div id="map_canvas"  style="width:100%; height:100%"></div>
+				</article>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+							<div class="contacts__item">
+								<i class="fa fa-map-marker"></i>
+								<p>Москва, 115035,<br>
+								 ул. Садовническая, 76/71</p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+							<div class="contacts__item">
+								<i class="fa fa-envelope-o"></i>
+								<p>info@goldenmedia.ru</p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+							<div class="contacts__item">
+								<i class="fa fa-phone"></i>
+								<h4>+ 7 495 975 6995</h4>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+							<input type="text" class="contacts--input" placeholder="Ваше имя">
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+							<input type="text" class="contacts--input" placeholder="E-mail">
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+							<input type="text" class="contacts--input" placeholder="Телефон">
+						</div>
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<textarea name="" id="" class="contacts--text" placeholder="Сообщение"></textarea>
+						</div>
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<input type="button" class="contacts--sub" value="Отправить">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
     
 
 	<script type="text/javascript">
