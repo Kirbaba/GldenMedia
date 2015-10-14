@@ -1,4 +1,9 @@
 <?php foreach($partners as $item){ ?>
-    <?= $item['link'] ?>
-    <?= $item['img'] ?>
+    <div class="col7">
+        <div class="partners__item">
+            <a href=" <?= $item['link'] ?>">
+                <img src="<?= $item['img'] ?>" alt="">
+            </a>
+        </div>
+    </div>
 <?php } ?>

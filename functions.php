@@ -475,6 +475,23 @@ function my_extra_fields_update($post_id)
     return $post_id;
 }
 
+//вывод артистов на главной
+function artists_sc(){
+    $args = array(
+        'post_type' => 'artists',
+        'post_status' => 'publish',
+        'posts_per_page' => 3);
+
+    $my_query = null;
+    $my_query = new WP_Query($args);
+
+    $parser = new Parser();
+    $parser->render(TM_DIR . '/view/artists.php', ['my_query' => $my_query]);
+
+}
+
+add_shortcode('artists', 'artists_sc');
+
 /*----------------END OUR ARTISTS------------------------------*/
 
 /*------------------POSTER--------------------------------*/
@@ -584,6 +601,7 @@ add_action('wp_ajax_more_poster', 'poster_sc');
 /*----------------END POSTER------------------------------*/
 
 /*-------------------NEWS---------------------------------*/
+
 //вывод новостей на главной
 function news_sc(){
     if($_POST['num']){
@@ -615,6 +633,5 @@ add_shortcode('news', 'news_sc');
 // ajax actions
 add_action('wp_ajax_nopriv_more_news', 'news_sc');
 add_action('wp_ajax_more_news', 'news_sc');
-
 
 /*-----------------END NEWS-------------------------------*/

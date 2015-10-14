@@ -243,51 +243,52 @@
 	<section class="artists">
 		<div class="container">
 			<div class="h1 block_title">НАШИ АРТИСТЫ</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-				<div class="artists__item">
-					<div class="artists__item--img">
-						<img src="<?php bloginfo('template_directory'); ?>/img/sati2.png" alt="">
-					</div>
-					<div class="artists__item--desc">
-						<h4>САТИ КАЗАНОВА</h4>
-						<a href="#">ИНФОРМАЦИЯ О АРТИСТЕ</a>
-						<div class="artists__item--desc--soc">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-vk"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-				<div class="artists__item">
-					<div class="artists__item--img">
-						<img src="<?php bloginfo('template_directory'); ?>/img/jas.png" alt="">
-					</div>
-					<div class="artists__item--desc">
-						<h4>Jasmine Thompson</h4>
-						<a href="#">ИНФОРМАЦИЯ О АРТИСТЕ</a>
-						<div class="artists__item--desc--soc">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-vk"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-				<div class="artists__item">
-					<div class="artists__item--img">
-						<img src="<?php bloginfo('template_directory'); ?>/img/ars.png" alt="">
-					</div>
-					<div class="artists__item--desc">
-						<h4>Arsenium</h4>
-						<a href="#">ИНФОРМАЦИЯ О АРТИСТЕ</a>
-						<div class="artists__item--desc--soc">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-vk"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
+			<?= do_shortcode('[artists]') ?>
+<!--			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">-->
+<!--				<div class="artists__item">-->
+<!--					<div class="artists__item--img">-->
+<!--						<img src="--><?php //bloginfo('template_directory'); ?><!--/img/sati2.png" alt="">-->
+<!--					</div>-->
+<!--					<div class="artists__item--desc">-->
+<!--						<h4>САТИ КАЗАНОВА</h4>-->
+<!--						<a href="#">ИНФОРМАЦИЯ О АРТИСТЕ</a>-->
+<!--						<div class="artists__item--desc--soc">-->
+<!--							<a href="#"><i class="fa fa-facebook"></i></a>-->
+<!--							<a href="#"><i class="fa fa-vk"></i></a>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">-->
+<!--				<div class="artists__item">-->
+<!--					<div class="artists__item--img">-->
+<!--						<img src="--><?php //bloginfo('template_directory'); ?><!--/img/jas.png" alt="">-->
+<!--					</div>-->
+<!--					<div class="artists__item--desc">-->
+<!--						<h4>Jasmine Thompson</h4>-->
+<!--						<a href="#">ИНФОРМАЦИЯ О АРТИСТЕ</a>-->
+<!--						<div class="artists__item--desc--soc">-->
+<!--							<a href="#"><i class="fa fa-facebook"></i></a>-->
+<!--							<a href="#"><i class="fa fa-vk"></i></a>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">-->
+<!--				<div class="artists__item">-->
+<!--					<div class="artists__item--img">-->
+<!--						<img src="--><?php //bloginfo('template_directory'); ?><!--/img/ars.png" alt="">-->
+<!--					</div>-->
+<!--					<div class="artists__item--desc">-->
+<!--						<h4>Arsenium</h4>-->
+<!--						<a href="#">ИНФОРМАЦИЯ О АРТИСТЕ</a>-->
+<!--						<div class="artists__item--desc--soc">-->
+<!--							<a href="#"><i class="fa fa-facebook"></i></a>-->
+<!--							<a href="#"><i class="fa fa-vk"></i></a>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
 		</div>
 	</section>
 
@@ -296,55 +297,56 @@
 		<div class="container">
 			<div class="row">
 				<h1 class="block_title">ПАРТНЕРЫ</h1>
-				<div class="col7">
-					<div class="partners__item">
-						<a href="#">
-							<img src="<?php bloginfo('template_directory'); ?>/img/cdland.png" alt="">
-						</a>
-					</div>
-				</div>
-				<div class="col7">
-					<div class="partners__item">
-						<a href="#">
-							<img src="<?php bloginfo('template_directory'); ?>/img/rayarena.png" alt="">
-						</a>
-					</div>
-				</div>
-				<div class="col7">
-					<div class="partners__item">
-						<a href="#">
-							<img src="<?php bloginfo('template_directory'); ?>/img/concertru.png" alt="">
-						</a>
-					</div>
-				</div>
-				<div class="col7">
-					<div class="partners__item">
-						<a href="#">
-							<img src="<?php bloginfo('template_directory'); ?>/img/kasirru.png" alt="">
-						</a>
-					</div>
-				</div>
-				<div class="col7">
-					<div class="partners__item">
-						<a href="#">
-							<img src="<?php bloginfo('template_directory'); ?>/img/russia1.png" alt="">
-						</a>
-					</div>
-				</div>
-				<div class="col7">
-					<div class="partners__item">
-						<a href="#">
-							<img src="<?php bloginfo('template_directory'); ?>/img/muztv.png" alt="">
-						</a>
-					</div>
-				</div>
-				<div class="col7">
-					<div class="partners__item">
-						<a href="#">
-							<img src="<?php bloginfo('template_directory'); ?>/img/izv.png" alt="">
-						</a>
-					</div>
-				</div>
+				<?= do_shortcode('[index_partners]');?>
+<!--				<div class="col7">-->
+<!--					<div class="partners__item">-->
+<!--						<a href="#">-->
+<!--							<img src="--><?php //bloginfo('template_directory'); ?><!--/img/cdland.png" alt="">-->
+<!--						</a>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="col7">-->
+<!--					<div class="partners__item">-->
+<!--						<a href="#">-->
+<!--							<img src="--><?php //bloginfo('template_directory'); ?><!--/img/rayarena.png" alt="">-->
+<!--						</a>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="col7">-->
+<!--					<div class="partners__item">-->
+<!--						<a href="#">-->
+<!--							<img src="--><?php //bloginfo('template_directory'); ?><!--/img/concertru.png" alt="">-->
+<!--						</a>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="col7">-->
+<!--					<div class="partners__item">-->
+<!--						<a href="#">-->
+<!--							<img src="--><?php //bloginfo('template_directory'); ?><!--/img/kasirru.png" alt="">-->
+<!--						</a>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="col7">-->
+<!--					<div class="partners__item">-->
+<!--						<a href="#">-->
+<!--							<img src="--><?php //bloginfo('template_directory'); ?><!--/img/russia1.png" alt="">-->
+<!--						</a>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="col7">-->
+<!--					<div class="partners__item">-->
+<!--						<a href="#">-->
+<!--							<img src="--><?php //bloginfo('template_directory'); ?><!--/img/muztv.png" alt="">-->
+<!--						</a>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="col7">-->
+<!--					<div class="partners__item">-->
+<!--						<a href="#">-->
+<!--							<img src="--><?php //bloginfo('template_directory'); ?><!--/img/izv.png" alt="">-->
+<!--						</a>-->
+<!--					</div>-->
+<!--				</div>-->
 			</div>
 		</div>
 	</section>
