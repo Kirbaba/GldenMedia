@@ -30,20 +30,20 @@ window.onload = loadScript;
 */
 
 
-$(function() {
+jQuery(function() {
 
-    $(window).scroll(function() {
-        if($(this).scrollTop() != 0) {
-            $('#toTop').fadeIn();
+    jQuery(window).scroll(function() {
+        if(jQuery(this).scrollTop() != 0) {
+            jQuery('#toTop').fadeIn();
         } else {
-            $('#toTop').fadeOut();
+            jQuery('#toTop').fadeOut();
         }
     });
-    $('#toTop').click(function() {
-        $('body,html').animate({scrollTop: 0}, 1000);
+    jQuery('#toTop').click(function() {
+        jQuery('body,html').animate({scrollTop: 0}, 1000);
     });
 
-    $('.smoothScroll').click(function(event) {
+    jQuery('.smoothScroll').click(function(event) {
         event.preventDefault();
         var href=$(this).attr('href');
         var target=$(href);
@@ -51,6 +51,24 @@ $(function() {
         $('html,body').animate({
             scrollTop: top
         }, 1000);
+    });
+});
+
+jQuery(document).ready(function(){
+    jQuery(document).on('click', '.more-poster', function(){
+        var num = jQuery(this).attr('data-page');
+
+        jQuery.ajax({
+            url: ajaxurl, //url, к которому обращаемся
+            type: "POST",
+            data: "action=more_poster&num=" +num, //данные, которые передаем. Обязательно для action указываем имя нашего хука
+            success: function(data){
+                num = num+1;
+                jQuery('.poster-row').append(data);
+                jQuery('.more-poster').attr('data-page', num);
+            }
+        });
+        return false;
     });
 });
 

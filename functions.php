@@ -5,6 +5,9 @@ define('TM_URL', get_template_directory_uri(__FILE__));
 
 require_once TM_DIR . '/lib/Parser.php';
 
+setlocale (LC_TIME, 'ru');
+
+
 function add_style(){
     wp_enqueue_style( 'my-bootstrap-extension', get_template_directory_uri() . '/css/bootstrap.css', array(), '1');
      wp_enqueue_style( 'fotorama', get_template_directory_uri() . '/css/fotorama.css', array('my-bootstrap-extension'), '1');
@@ -545,5 +548,36 @@ function extra_fields_time_func($post)
                                             style='width:100%'/></p>
     <?php
 }
+
+//вывод афиши на главной
+function poster_sc(){
+    if($_POST['num']){
+        $page = $_POST['num'];
+    }else{
+        $page = 1;
+    }
+
+    $args = array(
+        'post_type' => 'poster',
+        'post_status' => 'publish',
+        'posts_per_page' => 4,
+        'paged'=> $page);
+
+    $my_query = null;
+    $my_query = new WP_Query($args);
+
+    $parser = new Parser();
+    $parser->render(TM_DIR . '/view/poster.php', ['my_query' => $my_query]);
+
+    if($_POST['num']){
+        die();
+    }
+}
+
+add_shortcode('poster', 'poster_sc');
+
+// ajax actions
+add_action('wp_ajax_nopriv_more_poster', 'poster_sc');
+add_action('wp_ajax_more_poster', 'poster_sc');
 
 /*----------------END POSTER------------------------------*/
