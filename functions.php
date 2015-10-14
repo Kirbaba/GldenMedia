@@ -582,3 +582,39 @@ add_action('wp_ajax_nopriv_more_poster', 'poster_sc');
 add_action('wp_ajax_more_poster', 'poster_sc');
 
 /*----------------END POSTER------------------------------*/
+
+/*-------------------NEWS---------------------------------*/
+//вывод новостей на главной
+function news_sc(){
+    if($_POST['num']){
+        $page = $_POST['num'];
+    }else{
+        $page = 1;
+    }
+
+    $args = array(
+        'post_type' => 'post',
+        'category_name' => 'news',
+        'post_status' => 'publish',
+        'posts_per_page' => 3,
+        'paged'=> $page);
+
+    $my_query = null;
+    $my_query = new WP_Query($args);
+
+    $parser = new Parser();
+    $parser->render(TM_DIR . '/view/news.php', ['my_query' => $my_query]);
+
+    if($_POST['num']){
+        die();
+    }
+}
+
+add_shortcode('news', 'news_sc');
+
+// ajax actions
+add_action('wp_ajax_nopriv_more_news', 'news_sc');
+add_action('wp_ajax_more_news', 'news_sc');
+
+
+/*-----------------END NEWS-------------------------------*/

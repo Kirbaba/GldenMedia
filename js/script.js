@@ -70,5 +70,20 @@ jQuery(document).ready(function(){
         });
         return false;
     });
+    jQuery(document).on('click', '.news__more', function(){
+        var num = jQuery(this).attr('data-page');
+
+        jQuery.ajax({
+            url: ajaxurl, //url, к которому обращаемся
+            type: "POST",
+            data: "action=more_news&num=" +num, //данные, которые передаем. Обязательно для action указываем имя нашего хука
+            success: function(data){
+                num = num+1;
+                jQuery('.news-row').append(data);
+                jQuery('.news__more').attr('data-page', num);
+            }
+        });
+        return false;
+    });
 });
 
