@@ -167,16 +167,136 @@
 			</div>
 		</div>
 	</section>
-<script type="text/javascript">
-	addLoadEvent = function(func){if(typeof jQuery!="undefined")jQuery(document).ready(func);else if(typeof wpOnload!='function'){wpOnload=func;}else{var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}};
-	var ajaxurl = '/wp-admin/admin-ajax.php',
-		pagenow = 'toplevel_page_mainpage',
-		typenow = '',
-		adminpage = 'toplevel_page_mainpage',
-		thousandsSeparator = ' ',
-		decimalPoint = ',',
-		isRtl = 0;
-</script>
+	<section class="news">
+		<div class="container">
+			<h1 class="block_title white">Новости</h1>
+			<div class="row">
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+					<div class="news__item">
+						<div class="news__item--img">
+							<img src="<?php bloginfo('template_directory'); ?>/img/jjd.png" alt="">
+						</div>
+						<div class="news__item--soc">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-vk"></i></a>
+						</div>
+						<div class="news__item--title">
+							<p>19.06.2015</p>
+							<h4>АННА ШУЛЬГИНА:«БАЛ ДЕБЮТАНТОК — ЭТО ШАНС НАЙТИ ДРУЗЕЙ</h4>
+							<a href="#">> ПОДРОБНЕЕ</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+					<div class="news__item">
+						<div class="news__item--img">
+							<img src="<?php bloginfo('template_directory'); ?>/img/723028a42949105d432a898fb71b6c7e__230x230.png" alt="">
+						</div>
+						<div class="news__item--soc">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-vk"></i></a>
+						</div>
+						<div class="news__item--title">
+							<p>25.06.2015</p>
+							<h4>МАКСИМ ФАДЕЕВ ВОЗВРАЩАЕТСЯ НА СЦЕНУ ПОСЛЕ 20-ЛЕТ</h4>
+							<a href="#">> ПОДРОБНЕЕ</a>
+						</div>
+					</div>
+				</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+					<div class="news__item">
+						<div class="news__item--img">
+							<img src="<?php bloginfo('template_directory'); ?>/img/ab0963b4ac4eeb189494c7f18f9140d8__475x230.png" alt="">
+						</div>
+						<div class="news__item--soc">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-vk"></i></a>
+						</div>
+						<div class="news__item--title">
+							<p>29.06.2015</p>
+							<h4>ИГОРЬ КРУТОЙ:«НА КОНКУРСЕ «НОВАЯ ВОЛНА» В СОЧИ</h4>
+							<a href="#">> ПОДРОБНЕЕ</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a href="#" class="news__more">ДРУГИЕ НОВОСТИ</a>
+		</div>
+	</section>
+
+	<section class="company">
+		<div class="container">
+			<h1 class="block_title">КОМПАНИЯ</h1>
+				<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1">
+					<h4>Мы создали агентство GOLDEN MEDIA<br>по одной причине... </h4>
+					<h2>МЫ ЛЮБИМ МУЗЫКУ!</h2>
+					<p>Команда нашего концертного агентства состоит из профессиональных деятелей музыкальной индустрии с безупречной репутацией. Мы знаем, как создавать и продавать первоклассные шоу, будь то концерты или фестивали, классический жанр или хард-рок, детское мероприятие или кабаре. Для артистов и их менеджмента мы оказываем широкий спектр дополнительных услуг.</p>
+					<span>организация концертов | создание шоу | PR&promo | мерчендайзинг | реклама | celebrity marketing | музыкальный менеджмент | управление правами</span>
+				</div>
+			
+		</div>
+	</section>
+
+	<section class="artists">
+		<div class="container">
+			<div class="h1 block_title">НАШИ АРТИСТЫ</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+				<div class="artists__item">
+					<div class="artists__item--img">
+						<img src="<?php bloginfo('template_directory'); ?>/img/sati2.png" alt="">
+					</div>
+					<div class="artists__item--desc">
+						<h4>САТИ КАЗАНОВА</h4>
+						<a href="#">ИНФОРМАЦИЯ О АРТИСТЕ</a>
+						<div class="artists__item--desc--soc">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-vk"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+				<div class="artists__item">
+					<div class="artists__item--img">
+						<img src="<?php bloginfo('template_directory'); ?>/img/jas.png" alt="">
+					</div>
+					<div class="artists__item--desc">
+						<h4>Jasmine Thompson</h4>
+						<a href="#">ИНФОРМАЦИЯ О АРТИСТЕ</a>
+						<div class="artists__item--desc--soc">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-vk"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+				<div class="artists__item">
+					<div class="artists__item--img">
+						<img src="<?php bloginfo('template_directory'); ?>/img/ars.png" alt="">
+					</div>
+					<div class="artists__item--desc">
+						<h4>Arsenium</h4>
+						<a href="#">ИНФОРМАЦИЯ О АРТИСТЕ</a>
+						<div class="artists__item--desc--soc">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-vk"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript">
+		addLoadEvent = function(func){if(typeof jQuery!="undefined")jQuery(document).ready(func);else if(typeof wpOnload!='function'){wpOnload=func;}else{var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}};
+		var ajaxurl = '/wp-admin/admin-ajax.php',
+			pagenow = 'toplevel_page_mainpage',
+			typenow = '',
+			adminpage = 'toplevel_page_mainpage',
+			thousandsSeparator = ' ',
+			decimalPoint = ',',
+			isRtl = 0;
+	</script>
 <?php wp_footer(); ?>
 
 <!--	--><?php //echo get_theme_mod('fb_textbox'); ?>
