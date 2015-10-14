@@ -7,8 +7,8 @@
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p5">
                 <div class="showbill__item--time">
-                    <h3><span><?= iconv("cp1251", "UTF-8",strftime("%d", strtotime(get_post_meta(get_the_ID(), 'bg_date', 1)))) ?></span>
-                        <?= iconv("cp1251", "UTF-8",strftime("%B", strtotime(get_post_meta(get_the_ID(), 'bg_date', 1)))) ?></h3>
+                    <h3><span><?= strftime_rus('%d', get_post_meta(get_the_ID(), 'bg_date', 1)) ?></span>
+                        <?= strftime_rus('%B2', get_post_meta(get_the_ID(), 'bg_date', 1)) ?></h3>
                     <p><?= get_post_meta(get_the_ID(), 'bg_time', 1) ?></p>
                 </div>
             </div>

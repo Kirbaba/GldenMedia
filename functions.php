@@ -7,6 +7,43 @@ require_once TM_DIR . '/lib/Parser.php';
 
 setlocale (LC_TIME, 'ru');
 
+//падежи месяцев
+// Название месяца по метке UNIX
+function strftime_rus($format, $date = FALSE) {
+    // Работает точно так же, как и strftime(), только в строке формата может принимать дополнительный аргумент %B2, который будет заменен на русское название месяца в родительном падеже. %e - день месяца. http://webew.ru/posts/4024.webew
+
+    if (!$date)
+        $timestamp = time();
+
+    elseif (!is_numeric($date))
+        $timestamp = strtotime($date);
+
+    else
+        $timestamp = $date;
+
+    if (strpos($format, '%B2') === FALSE)
+        return strftime($format, $timestamp);
+
+    $month_number = date('n', $timestamp);
+
+    switch ($month_number) {
+        case 1: $rus = 'января'; break;
+        case 2: $rus = 'февраля'; break;
+        case 3: $rus = 'марта'; break;
+        case 4: $rus = 'апреля'; break;
+        case 5: $rus = 'мая'; break;
+        case 6: $rus = 'июня'; break;
+        case 7: $rus = 'июля'; break;
+        case 8: $rus = 'августа'; break;
+        case 9: $rus = 'сентября'; break;
+        case 10: $rus = 'октября'; break;
+        case 11: $rus = 'ноября'; break;
+        case 12: $rus = 'декабря'; break;
+    }
+
+    $rusformat = str_replace('%B2', $rus, $format);
+    return strftime($rusformat, $timestamp);
+}
 
 function add_style(){
     wp_enqueue_style( 'my-bootstrap-extension', get_template_directory_uri() . '/css/bootstrap.css', array(), '1');
@@ -389,8 +426,6 @@ add_action('customize_register', function($customizer){
             'type' => 'text',
         )
     );
-
-
 
 });
 
