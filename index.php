@@ -165,6 +165,63 @@
 			</div>
 		</div>
 	</section>
+
+	<section class="news">
+		<div class="container">
+			<h1 class="block_title white">Новости</h1>
+			<div class="row">
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+					<div class="news__item">
+						<div class="news__item--img">
+							<img src="<?php bloginfo('template_directory'); ?>/img/jjd.png" alt="">
+						</div>
+						<div class="news__item--soc">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-vk"></i></a>
+						</div>
+						<div class="news__item--title">
+							<p>19.06.2015</p>
+							<h4>АННА ШУЛЬГИНА:«БАЛ ДЕБЮТАНТОК — ЭТО ШАНС НАЙТИ ДРУЗЕЙ</h4>
+							<a href="#">> ПОДРОБНЕЕ</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+					<div class="news__item">
+						<div class="news__item--img">
+							<img src="<?php bloginfo('template_directory'); ?>/img/723028a42949105d432a898fb71b6c7e__230x230.png" alt="">
+						</div>
+						<div class="news__item--soc">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-vk"></i></a>
+						</div>
+						<div class="news__item--title">
+							<p>25.06.2015</p>
+							<h4>МАКСИМ ФАДЕЕВ ВОЗВРАЩАЕТСЯ НА СЦЕНУ ПОСЛЕ 20-ЛЕТ</h4>
+							<a href="#">> ПОДРОБНЕЕ</a>
+						</div>
+					</div>
+				</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+					<div class="news__item">
+						<div class="news__item--img">
+							<img src="<?php bloginfo('template_directory'); ?>/img/ab0963b4ac4eeb189494c7f18f9140d8__475x230.png" alt="">
+						</div>
+						<div class="news__item--soc">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-vk"></i></a>
+						</div>
+						<div class="news__item--title">
+							<p>29.06.2015</p>
+							<h4>ИГОРЬ КРУТОЙ:«НА КОНКУРСЕ «НОВАЯ ВОЛНА» В СОЧИ</h4>
+							<a href="#">> ПОДРОБНЕЕ</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a href="#" class="news__more">ДРУГИЕ НОВОСТИ</a>
+		</div>
+	</section>
     
 <?php wp_footer(); ?>
 
