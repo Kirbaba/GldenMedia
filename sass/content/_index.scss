@@ -85,11 +85,13 @@
 	position: relative;
 	width: 100%;
 	background-image: url(../img/bg1.png);
+	background-color: rgba(255, 255, 255, 0);
 	-webkit-background-size: cover;
 	     -o-background-size: cover;
 	        background-size: cover;
 	background-repeat: no-repeat;
 	padding: 25px 0 85px;
+	z-index: 9;
 	&__item {
 		margin: 25px 0;
 		&--img {
@@ -153,6 +155,45 @@
 		&:hover {
 			color: #fff;
 		}
+	}
+}
+.company {
+	display: block;
+	float: left;
+	width: 100%;
+	background-image: url('../img/bg2-2.png');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	background-color: #000;
+	padding: 75px 0 100px;
+	margin-top: -50px;
+	color: #E8C76C;
+	h4 {
+		font-family: $l;
+		font-size: 31px;
+		text-align: center;
+		margin: 50px;
+	}
+	h2 {
+		font-size: 60px;
+		font-family: $l;
+		text-align: center;
+		margin: 25px 0 50px;
+	}
+	p {
+		color: #fff;
+		text-align: center;
+		font-size: 20px;
+	}
+	span {
+		color: #E4D190;
+		text-align: center;
+		font-size: 12px;
+		margin-top: 50px;
+		display: block;
 	}
 }
 
