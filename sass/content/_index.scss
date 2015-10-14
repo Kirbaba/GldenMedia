@@ -292,7 +292,7 @@
 	float: left;
 	position: relative;
 	width: 100%;
-	padding: 75px 0 150px;
+	padding: 75px 0 25px;
 	&__map {
 		height: 310px;
 		margin-bottom: 50px;
@@ -328,6 +328,7 @@
 		outline: none;	
 		padding: 0 15px;
 		font-size: 21px;	
+		margin-top: 15px;
 	}
 	&--text {
 		color: #80786E;
