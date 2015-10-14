@@ -272,10 +272,17 @@
 	z-index: 0;
 	&__item {
 		margin: 25px 0;
+		height: 83px;
+		position: relative;
 		img {
 			width: 80%;
 			margin: 0 auto;
 			display: block;
+		    position: absolute;
+			margin-left: -40%;
+			left: 50%;
+			top: 50%;
+			transform: translateY(-50%);
 		}
 	}
 }

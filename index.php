@@ -10,6 +10,7 @@
     </script>
     <title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
     <?php wp_head(); ?>
+
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top navigation" role="navigation">
@@ -79,93 +80,93 @@
 	<section class="showbill">
 		<div class="container">
 			<h1 class="block_title">АФИША</h1>
-			<div class="row">
-				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div class="showbill__item">
-						<div class="showbill__item--img">
-							<img src="<?php bloginfo('template_directory'); ?>/img/best.png" alt="">
-						</div>						
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p5">
-							<div class="showbill__item--time">
-								<h3><span>29</span>апреля</h3>
-								<p>21:00</p>
-							</div>
-						</div>
-						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-							<div class="showbill__item--info">
-								<h2>Артур Бэст</h2>
-								<p>театр Надежды Бабкиной "Русская песня"</p>
-							</div>
-						</div>
-					
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div class="showbill__item">
-						<div class="showbill__item--img">
-							<img src="<?php bloginfo('template_directory'); ?>/img/pozner.png" alt="">
-						</div>						
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p5">
-							<div class="showbill__item--time">
-								<h3><span>08</span>апреля</h3>
-								<p>21:00</p>
-							</div>
-						</div>
-						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-							<div class="showbill__item--info">
-								<h2>Владимир Познер</h2>
-								<p>Московский Дом Музыки</p>
-							</div>
-						</div>
-					
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div class="showbill__item">
-						<div class="showbill__item--img">
-							<img src="<?php bloginfo('template_directory'); ?>/img/ri.png" alt="">
-						</div>						
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p5">
-							<div class="showbill__item--time">
-								<h3><span>10</span>апреля</h3>
-								<p>21:00</p>
-							</div>
-						</div>
-						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-							<div class="showbill__item--info">
-								<h2>Rihanna</h2>
-								<p>СК “ОЛИМПИЙСКИЙ”</p>
-							</div>
-						</div>
-					
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div class="showbill__item">
-						<div class="showbill__item--img">
-							<img src="<?php bloginfo('template_directory'); ?>/img/sati.png" alt="">
-						</div>						
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p5">
-							<div class="showbill__item--time">
-								<h3><span>17</span>апреля</h3>
-								<p>21:00</p>
-							</div>
-						</div>
-						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-							<div class="showbill__item--info">
-								<h2>Сати Казанова</h2>
-								<p>КЗ “РОССИЯ”</p>
-							</div>
-						</div>					
-					</div>
-				</div>			
+			<div class="row poster-row">
+				<?= do_shortcode('[poster]') ?>
+<!--				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">-->
+<!--					<div class="showbill__item">-->
+<!--						<div class="showbill__item--img">-->
+<!--							<img src="--><?php //bloginfo('template_directory'); ?><!--/img/best.png" alt="">-->
+<!--						</div>						-->
+<!--						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p5">-->
+<!--							<div class="showbill__item--time">-->
+<!--								<h3><span>29</span>апреля</h3>-->
+<!--								<p>21:00</p>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">-->
+<!--							<div class="showbill__item--info">-->
+<!--								<h2>Артур Бэст</h2>-->
+<!--								<p>театр Надежды Бабкиной "Русская песня"</p>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">-->
+<!--					<div class="showbill__item">-->
+<!--						<div class="showbill__item--img">-->
+<!--							<img src="--><?php //bloginfo('template_directory'); ?><!--/img/pozner.png" alt="">-->
+<!--						</div>						-->
+<!--						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p5">-->
+<!--							<div class="showbill__item--time">-->
+<!--								<h3><span>08</span>апреля</h3>-->
+<!--								<p>21:00</p>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">-->
+<!--							<div class="showbill__item--info">-->
+<!--								<h2>Владимир Познер</h2>-->
+<!--								<p>Московский Дом Музыки</p>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">-->
+<!--					<div class="showbill__item">-->
+<!--						<div class="showbill__item--img">-->
+<!--							<img src="--><?php //bloginfo('template_directory'); ?><!--/img/ri.png" alt="">-->
+<!--						</div>						-->
+<!--						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p5">-->
+<!--							<div class="showbill__item--time">-->
+<!--								<h3><span>10</span>апреля</h3>-->
+<!--								<p>21:00</p>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">-->
+<!--							<div class="showbill__item--info">-->
+<!--								<h2>Rihanna</h2>-->
+<!--								<p>СК “ОЛИМПИЙСКИЙ”</p>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">-->
+<!--					<div class="showbill__item">-->
+<!--						<div class="showbill__item--img">-->
+<!--							<img src="--><?php //bloginfo('template_directory'); ?><!--/img/sati.png" alt="">-->
+<!--						</div>						-->
+<!--						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p5">-->
+<!--							<div class="showbill__item--time">-->
+<!--								<h3><span>17</span>апреля</h3>-->
+<!--								<p>21:00</p>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">-->
+<!--							<div class="showbill__item--info">-->
+<!--								<h2>Сати Казанова</h2>-->
+<!--								<p>КЗ “РОССИЯ”</p>-->
+<!--							</div>-->
+<!--						</div>					-->
+<!--					</div>-->
+<!--				</div>			-->
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col-lg-offset-4 col-md-offset-4 col-sm-offset-3">
-				<div class="showbill__more"><a href="#">СМОТРЕТЬ ДАЛЬШЕ АФИШУ</a></div>
+				<div class="showbill__more"><a href="#" class="more-poster" data-page="2">СМОТРЕТЬ ДАЛЬШЕ АФИШУ</a></div>
 			</div>
 		</div>
 	</section>
-
 	<section class="news">
 		<div class="container">
 			<h1 class="block_title white">Новости</h1>
@@ -287,6 +288,7 @@
 		</div>
 	</section>
 
+
 	<section class="partners">
 		<div class="container">
 			<div class="row">
@@ -344,6 +346,18 @@
 		</div>
 	</section>
     
+
+	<script type="text/javascript">
+		addLoadEvent = function(func){if(typeof jQuery!="undefined")jQuery(document).ready(func);else if(typeof wpOnload!='function'){wpOnload=func;}else{var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}};
+		var ajaxurl = '/wp-admin/admin-ajax.php',
+			pagenow = 'toplevel_page_mainpage',
+			typenow = '',
+			adminpage = 'toplevel_page_mainpage',
+			thousandsSeparator = ' ',
+			decimalPoint = ',',
+			isRtl = 0;
+	</script>
+
 <?php wp_footer(); ?>
 
 <!--	--><?php //echo get_theme_mod('fb_textbox'); ?>

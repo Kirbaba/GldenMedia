@@ -512,11 +512,18 @@ ul {
   margin-top: -130px;
   z-index: 0; }
   .partners__item {
-    margin: 25px 0; }
+    margin: 25px 0;
+    height: 83px;
+    position: relative; }
     .partners__item img {
       width: 80%;
       margin: 0 auto;
-      display: block; }
+      display: block;
+      position: absolute;
+      margin-left: -40%;
+      left: 50%;
+      top: 50%;
+      transform: translateY(-50%); }
 
 @media only screen and (max-width: 770px) {
   .align-left {
