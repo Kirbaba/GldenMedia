@@ -7,7 +7,7 @@ while ($my_query->have_posts()) : $my_query->the_post(); ?>
                 </div>
                 <div class="news__item--soc">
                     <a href="http://www.facebook.com/sharer.php?u=<?= get_permalink(get_the_ID()); ?>" target="_blank"><i class="fa fa-facebook"></i></a>
-                    <a href="http://vk.com/share.php?url=http://google.com" target="_blank"><i class="fa fa-vk"></i></a>
+                    <a href="http://vk.com/share.php?url=<?= get_permalink(get_the_ID()); ?>" target="_blank"><i class="fa fa-vk"></i></a>
 <!--                    <a href="http://vk.com/share.php?url=--><?//= get_permalink(get_the_ID()); ?><!--" target="_blank"><i class="fa fa-vk"></i></a>-->
                 </div>
                 <div class="news__item--title">
