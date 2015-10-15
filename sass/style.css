@@ -168,7 +168,7 @@ ul {
 
 .navbar-brand {
   display: none;
-  padding: 10px 0; }
+  padding: 10px 0 0 10px; }
   .navbar-brand h3 {
     color: #000;
     text-transform: uppercase;
@@ -271,7 +271,7 @@ ul {
         top: 50%;
         transform: translateY(-50%);
         max-width: 100%;
-        min-height: 100%;
+        height: auto;
         vertical-align: middle; }
     .showbill__item--time {
       margin-top: 15px; }
@@ -357,7 +357,7 @@ ul {
         top: 50%;
         transform: translateY(-50%);
         max-width: 100%;
-        min-height: 100%;
+        height: auto;
         vertical-align: middle; }
       .news__item--img img {
         width: 100%; }
@@ -489,7 +489,7 @@ ul {
         top: 50%;
         transform: translateY(-50%);
         max-width: 100%;
-        min-height: 100%;
+        height: auto;
         vertical-align: middle; }
     .artists__item--desc {
       text-align: center;
@@ -654,12 +654,63 @@ ul {
     margin: 15px 10px;
     text-align: center; }
 
+@media only screen and (max-width: 1030px) {
+  .nav > li > a {
+    padding: 10px 5px; }
+
+  .navbar-nav li a {
+    font-size: 14px; }
+
+  .header:after {
+    bottom: -10%; }
+
+  .showbill__item--time h3 {
+    font-size: 12px; }
+    .showbill__item--time h3 span {
+      font-size: 50px; }
+
+  .showbill__item--info h2 {
+    font-size: 16px; }
+  .showbill__item--info p {
+    font-size: 7px; } }
 @media only screen and (max-width: 770px) {
   .align-left {
     text-align: center; }
 
   .align-right {
-    text-align: center; } }
+    text-align: center; }
+
+  .navbar-nav li a {
+    font-size: 10px; }
+
+  .artists {
+    background-position: 50% 70%; }
+    .artists__item--img {
+      width: 200px;
+      height: 200px; }
+
+  .partners {
+    margin-top: -215px; }
+
+  .header:after {
+    bottom: -7%; }
+
+  .news__item--soc a {
+    z-index: 99;
+    position: relative; }
+
+  .header__mouse {
+    display: none; }
+
+  .showbill__item--time h3 {
+    font-size: 17px; }
+    .showbill__item--time h3 span {
+      font-size: 70px; }
+
+  .showbill__item--info h2 {
+    font-size: 24px; }
+  .showbill__item--info p {
+    font-size: 11px; } }
 @media only screen and (max-width: 500px) {
   .header__logo {
     display: none; }
@@ -673,9 +724,6 @@ ul {
 
   .navbar-header {
     margin: 0; }
-
-  .header__mouse {
-    display: none; }
 
   .header__text h1 {
     font-size: 24px; }
@@ -725,6 +773,9 @@ ul {
     background-size: cover; }
     .artists .block_title {
       color: #FFF; }
+    .artists__item--img {
+      width: 200px;
+      height: 200px; }
 
   .showbill {
     padding-top: 35px; }
@@ -732,6 +783,9 @@ ul {
   .col7 {
     width: 50%; }
     .col7:last-of-type {
-      margin: 0 25%; } }
+      margin: 0 25%; }
+
+  .navbar-brand {
+    padding-left: 10px; } }
 
 /*# sourceMappingURL=style.css.map */

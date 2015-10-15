@@ -1,5 +1,27 @@
-@media only screen and (max-width: 980px) {
-	
+@media only screen and (max-width: 1030px) {
+	.nav > li > a {
+		padding: 10px 5px;
+	}
+	.navbar-nav li a {
+    	font-size: 14px;
+    }
+    .header:after {
+		bottom: -10%;
+    }
+    .showbill__item--time h3 {
+		font-size: 12px;
+		span {
+			font-size: 50px;
+		}
+	}
+	.showbill__item--info {
+		h2 {
+			font-size: 16px;
+		}
+		p {
+			font-size: 7px;
+		}
+	}
 }
 
 @media only screen and (max-width: 770px) {
@@ -8,10 +30,48 @@
 	}
 	.align-right {
 		text-align: center;
+	}	
+	.navbar-nav li a {
+    	font-size: 10px;
+    }
+    .artists {
+    	background-position: 50% 70%;
+	    &__item--img {
+	    	width: 200px;
+	    	height: 200px;
+	    }
+	}
+	.partners {
+		margin-top: -215px;
+	}
+	.header:after {
+		bottom: -7%;
+	}
+	.news__item--soc a {
+		z-index: 99;
+		position: relative;
+	}
+	.header__mouse {
+		display: none;
+	}	
+	.showbill__item--time h3 {
+		font-size: 17px;
+		span {
+			font-size: 70px;
+		}
+	}
+	.showbill__item--info {
+		h2 {
+			font-size: 24px;
+		}
+		p {
+			font-size: 11px;
+		}
 	}
 }
 
 @media only screen and (max-width: 500px) {
+
 	.header__logo {
 		display: none;
 	}
@@ -27,10 +87,7 @@
 	.navbar-header {
 		margin: 0;
 	}
-
-	.header__mouse {
-		display: none;
-	}
+	
 	.header__text h1 {
 		font-size: 24px;
 	}
@@ -92,6 +149,10 @@
 	    .block_title {
 	    	color: #FFF;
 	    }
+	    &__item--img {
+	    	width: 200px;
+	    	height: 200px;
+	    }
 	}
 	.showbill {
 		padding-top: 35px;
@@ -101,5 +162,8 @@
 		&:last-of-type {
 			margin: 0 25%;
 		}
+	}
+	.navbar-brand {
+		padding-left: 10px;
 	}
 }
