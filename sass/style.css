@@ -709,6 +709,29 @@ ul {
     display: block; }
 
   .navbar-nav > li > a {
-    padding: 5px 0; } }
+    padding: 5px 0; }
+
+  .company h4 {
+    font-size: 21px;
+    margin: 25px 0; }
+  .company h2 {
+    font-size: 42px; }
+  .company p {
+    font-size: 16px; }
+
+  .artists {
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+    .artists .block_title {
+      color: #FFF; }
+
+  .showbill {
+    padding-top: 35px; }
+
+  .col7 {
+    width: 50%; }
+    .col7:last-of-type {
+      margin: 0 25%; } }
 
 /*# sourceMappingURL=style.css.map */

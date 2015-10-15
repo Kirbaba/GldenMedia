@@ -28,7 +28,7 @@
 					<h3><span>GOLDEN</span>MEDIA</h3>
 				</div>     		      
 			</div>
-			<div class="row">
+			
 			<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">		      	     
 					<ul class="nav navbar-nav navbar-center navigation__list">		      
@@ -43,7 +43,7 @@
 						<li><a href="#">ОРГАНИЗАЦИЯ КОНЦЕРТОВ</a></li>  		        		       
 					</ul>
 				</div><!-- /.navbar-collapse -->
-			</div>
+
 		</div><!-- /.container-fluid -->
 	</nav>	
 
@@ -413,7 +413,7 @@
 						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 							<textarea id="" class="contacts--text" placeholder="Сообщение" name="contact-text"></textarea>
 						</div>
-						<div class="row">
+						<div>
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 								<input type="button" class="contacts--sub" value="Отправить">
 							</div>
