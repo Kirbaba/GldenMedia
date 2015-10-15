@@ -154,4 +154,39 @@ jQuery(document).ready(function ($) {
         }
     });
 
+    $(document).on('click', '.del-link', function(){
+        var id = $(this).attr('data-num');
+        if(id != undefined){
+            var block = $(this).parent().parent().parent();
+            $.ajax({
+                type:'POST',
+                url:ajaxurl,
+                data:'action=save_link&del_link='+id,
+                success:function(data){
+                    alert("Ссылка удалена!");
+                    block.remove();
+                }
+            });
+        }
+    });
+
+    $(document).on('click', '.save-link', function(){
+        var block = $(this).parent().parent();
+
+        var id = block.parent().attr('data-num');
+        var name = block.children().children('[name="db_link"]').val();
+        var link = block.children().children('[name="db_name"]').val();
+
+        if(id != undefined){
+            var block = $(this).parent().parent().parent();
+            $.ajax({
+                type:'POST',
+                url:ajaxurl,
+                data:'action=save_link&id='+id+'&name='+name+'&link='+link+'&update=1',
+                success:function(data){
+                    alert("Ссылка обновлена!");
+                }
+            });
+        }
+    });
 });

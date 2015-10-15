@@ -113,6 +113,7 @@ function admin_menu()
 {
     add_menu_page('Настройка слайдера', 'Слайдер', 'manage_options', 'slider', 'slider');
     add_menu_page('Настройка партнеров', 'Партнеры', 'manage_options', 'partners', 'partners');
+    add_menu_page('Ссылки компании', 'Ссылки', 'manage_options', 'companylinks', 'companylinks');
 }
 
 add_action('admin_menu', 'admin_menu');
@@ -235,7 +236,7 @@ function partnersgrid_sc()
 }
 add_shortcode('partnersgrid','partnersgrid_sc');
 
-//сохранение нового слайда
+//сохранение нового партнера
 function save_partner()
 {
     global $wpdb;
@@ -261,7 +262,7 @@ function update_partner()
     die();
 }
 
-//Удаление слайда
+//Удаление партнера
 function delete_partner()
 {
     global $wpdb;
@@ -704,4 +705,51 @@ function send_feedback(){
 }
 
 /*----------------END FEEDBACK----------------------------*/
+
+/*----------------COMPANY LINKS---------------------------*/
+// ajax actions
+add_action('wp_ajax_nopriv_save_link', 'companylinks');
+add_action('wp_ajax_save_link', 'companylinks');
+
+function companylinks(){
+    global $wpdb;
+
+    if(isset($_POST['link']) && !empty($_POST['link'])){
+        if(isset($_POST['update'])){
+            $wpdb->update('companylinks', array('link' => $_POST['link'],'name' => $_POST['name']),array('id'=>$_POST['id']));
+        }else{
+            $wpdb->insert('companylinks', array('link' => $_POST['link'],'name' => $_POST['name']));
+        }
+    }
+
+    if(isset($_POST['del_link'])){
+        $wpdb->delete('companylinks', array('id' => $_POST['del_link']));
+    }
+
+
+    $parser = new Parser();
+    $parser->render(TM_DIR . "/view/companylinks.php", array(), true);
+}
+
+function companylink_sc(){
+    $links = getDataFromDb('companylinks');
+
+    $parser = new Parser();
+    $parser->render(TM_DIR . "/view/linksgrid.php", array('links' => $links), true);
+}
+add_shortcode('companylinks','companylink_sc');
+
+function link_sc(){
+    $links = getDataFromDb('companylinks');
+
+    $html = '';
+    foreach($links as $link){
+        $html .= '<a href="'.$link['link'].'">'.$link['name'].'</a> ';
+    }
+
+    echo $html;
+}
+add_shortcode('links','link_sc');
+
+/*--------------END COMPANY LINKS-------------------------*/
 
