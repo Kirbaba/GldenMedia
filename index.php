@@ -13,6 +13,7 @@
 
 </head>
 <body>
+	
 	<nav class="navbar navbar-default navbar-fixed-top navigation" role="navigation">
 		<div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
@@ -22,24 +23,30 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
-				</button>		      
+				</button>
+				<div class="navbar-brand">
+					<h3><span>GOLDEN</span>MEDIA</h3>
+				</div>     		      
 			</div>
+			<div class="row">
 			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">		      	     
-				<ul class="nav navbar-nav navbar-center navigation__list">		      
-					<li><a href="#">Главная</a></li>
-					<li><a href="#">КОНЦЕРТНЫЙ ГРАФИК</a></li>
-					<li><a href="#">ДИСКОГРАФИЯ</a></li>
-					<li><a href="#">КАТАЛОГ ПЕСЕН</a></li>
-					<li><a href="#">ФОТО</a></li> 
-					<li><a href="#">ВИДЕО</a></li>
-					<li><a href="#">СМИ</a></li>
-					<li><a href="#">СМИ</a></li>
-					<li><a href="#">ОРГАНИЗАЦИЯ КОНЦЕРТОВ</a></li>  		        		       
-				</ul>
-			</div><!-- /.navbar-collapse -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">		      	     
+					<ul class="nav navbar-nav navbar-center navigation__list">		      
+						<li><a href="#">Главная</a></li>
+						<li><a href="#">КОНЦЕРТНЫЙ ГРАФИК</a></li>
+						<li><a href="#">ДИСКОГРАФИЯ</a></li>
+						<li><a href="#">КАТАЛОГ ПЕСЕН</a></li>
+						<li><a href="#">ФОТО</a></li> 
+						<li><a href="#">ВИДЕО</a></li>
+						<li><a href="#">СМИ</a></li>
+						<li><a href="#">СМИ</a></li>
+						<li><a href="#">ОРГАНИЗАЦИЯ КОНЦЕРТОВ</a></li>  		        		       
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div>
 		</div><!-- /.container-fluid -->
 	</nav>	
+
 	<header class="header">
 		<div class="header__logo">
 			<h3><span>GOLDEN</span>MEDIA</h3>

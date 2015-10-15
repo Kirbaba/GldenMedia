@@ -166,6 +166,18 @@ ul {
   margin-bottom: 0;
   z-index: 9999; }
 
+.navbar-brand {
+  display: none;
+  padding: 10px 0; }
+  .navbar-brand h3 {
+    color: #000;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: "MyriadProRegular";
+    margin: 0; }
+    .navbar-brand h3 span {
+      color: #B88909; }
+
 .header {
   margin-top: 75px;
   position: relative; }
@@ -648,5 +660,55 @@ ul {
 
   .align-right {
     text-align: center; } }
+@media only screen and (max-width: 500px) {
+  .header__logo {
+    display: none; }
+
+  .navbar-brand {
+    display: block; }
+
+  .navigation {
+    padding: 10px 0;
+    width: 100%; }
+
+  .navbar-header {
+    margin: 0; }
+
+  .header__mouse {
+    display: none; }
+
+  .header__text h1 {
+    font-size: 24px; }
+
+  .header__text h4 {
+    font-size: 16px; }
+
+  .fotorama__arr {
+    width: 32px;
+    height: 32px; }
+
+  .fotorama__nav-wrap {
+    margin-bottom: 5px; }
+
+  .header:after {
+    bottom: -25px; }
+
+  .fotorama__dot {
+    width: 20px; }
+
+  .fotorama__nav__frame.fotorama__active .fotorama__dot {
+    width: 20px; }
+
+  .navbar-nav {
+    text-align: left; }
+
+  .navbar-collapse {
+    background-color: white; }
+
+  .navbar-nav li {
+    display: block; }
+
+  .navbar-nav > li > a {
+    padding: 5px 0; } }
 
 /*# sourceMappingURL=style.css.map */
