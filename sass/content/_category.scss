@@ -1,0 +1,19 @@
+.category {
+	display: block;
+	float: left;
+	position: relative;
+	width: 100%;
+	margin-top: -25px;
+	margin-bottom: 100px;
+	.news__item--title {
+		a {
+			color: #95836D;
+		}
+		p {
+			color: #95836D;
+		}
+		h4 {
+			color: #585858;
+		}
+	}
+}
