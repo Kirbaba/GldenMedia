@@ -10,6 +10,10 @@
   font-family: 'CirceLight';
   src: url("../fonts/CirceLight.eot");
   src: url("../fonts/CirceLight.eot") format("embedded-opentype"), url("../fonts/CirceLight.woff2") format("woff2"), url("../fonts/CirceLight.woff") format("woff"), url("../fonts/CirceLight.ttf") format("truetype"), url("../fonts/CirceLight.svg#CirceLight") format("svg"); }
+@font-face {
+  font-family: 'CirceExtraBold';
+  src: url("../fonts/circe-extrabold.eot");
+  src: url("../fonts/circe-extrabold.eot") format("embedded-opentype"), url("../fonts/circe-extrabold.woff") format("woff"), url("../fonts/circe-extrabold.ttf") format("truetype"), url("../fonts/circe-extrabold.svg#circe-extrabold") format("svg"); }
 /* font-family: "MyriadProRegular"; */
 @font-face {
   font-family: "MyriadProRegular";
@@ -237,6 +241,31 @@ ul {
     -o-background-size: contain;
     background-size: contain;
     z-index: 150; }
+
+.page__header {
+  display: block;
+  float: left;
+  width: 100%;
+  height: 220px;
+  background-image: url("../img/page_header.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  padding-top: 75px;
+  position: relative;
+  z-index: 9; }
+  .page__header__logo {
+    position: relative;
+    right: 75px;
+    float: right;
+    z-index: 9; }
+    .page__header__logo h3 {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 30px;
+      font-family: "CirceRegular"; }
+      .page__header__logo h3 span {
+        color: #d0a568;
+        font-family: "CirceExtraBold"; }
 
 .showbill {
   display: block;
@@ -629,6 +658,60 @@ ul {
     .contacts--sub:hover, .contacts--sub:active, .contacts--sub:focus {
       background-color: #7d673a; }
 
+.page {
+  display: block;
+  float: left;
+  width: 100%;
+  position: relative;
+  margin-top: -125px;
+  z-index: 1; }
+  .page__title {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    overflow: hidden; }
+    .page__title img {
+      position: relative;
+      max-width: 100%;
+      height: auto;
+      vertical-align: middle;
+      z-index: 1; }
+    .page__title--name {
+      position: absolute;
+      top: 200px;
+      z-index: 99;
+      width: 100%; }
+      .page__title--name h2 {
+        color: #CDCDC1;
+        text-align: center;
+        font-family: "CirceLight";
+        font-size: 42px;
+        text-transform: uppercase;
+        margin-bottom: 5px; }
+      .page__title--name h4 {
+        color: #CDCDC1;
+        text-align: center;
+        font-family: "CirceLight";
+        font-size: 23px; }
+  .page__text {
+    display: block;
+    float: left;
+    width: 100%;
+    margin: 50px 0; }
+    .page__text .news__item--soc a {
+      display: block;
+      float: none; }
+    .page__text--box {
+      display: block;
+      float: left;
+      width: 90%; }
+      .page__text--box p {
+        font-size: 15px;
+        font-family: Arial;
+        color: #968D80;
+        margin-bottom: 15px; }
+
 .footer {
   display: block;
   float: left;
@@ -672,7 +755,10 @@ ul {
   .showbill__item--info h2 {
     font-size: 16px; }
   .showbill__item--info p {
-    font-size: 7px; } }
+    font-size: 7px; }
+
+  .page__title--name {
+    top: 150px; } }
 @media only screen and (max-width: 770px) {
   .align-left {
     text-align: center; }
@@ -710,7 +796,18 @@ ul {
   .showbill__item--info h2 {
     font-size: 24px; }
   .showbill__item--info p {
-    font-size: 11px; } }
+    font-size: 11px; }
+
+  .page__header {
+    height: 175px;
+    background-position: 50% 100%;
+    padding-top: 35px; }
+
+  .page {
+    margin-top: -135px; }
+
+  .page__header__logo {
+    display: none; } }
 @media only screen and (max-width: 500px) {
   .header__logo {
     display: none; }
@@ -786,6 +883,24 @@ ul {
       margin: 0 25%; }
 
   .navbar-brand {
-    padding-left: 10px; } }
+    padding-left: 10px; }
+
+  .page__header {
+    -webkit-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    background-position: 50% 13%; }
+
+  .page__title--name {
+    top: 25px; }
+    .page__title--name h2 {
+      font-size: 20px;
+      margin-bottom: 0; }
+    .page__title--name h4 {
+      font-size: 16px;
+      margin: 0; }
+
+  .page__text--box {
+    padding-left: 15px; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,66 @@
+.page {
+	display: block;
+	float: left;
+	width: 100%;
+	position: relative;
+	margin-top: -125px;
+	z-index: 1;
+	&__title {
+		display: block;
+		position: relative;
+		float: left;
+		width: 100%;
+		overflow: hidden;
+		img {
+			position: relative;
+			max-width: 100%;
+			height: auto;
+			vertical-align: middle;
+			z-index: 1;
+		}
+		&--name {
+			position: absolute;
+			top: 200px;
+			z-index: 99;
+			width: 100%;	
+			h2 {
+				color: #CDCDC1;
+				text-align: center;
+				font-family: $l;
+				font-size: 42px;
+				text-transform: uppercase;
+				margin-bottom: 5px;
+			}		
+			h4 {
+				color: #CDCDC1;
+				text-align: center;
+				font-family: $l;
+				font-size: 23px;
+			}
+		}
+	}
+	&__text {
+		display: block;
+		float: left;
+		width: 100%;
+		margin: 50px 0;
+		.news__item--soc {
+			a {
+				display: block;
+				float: none;
+			}
+		}
+		&--box {
+			display: block;
+			float: left;
+			width: 90%;			
+			p {
+				font-size: 15px;
+				font-family: Arial;
+				color: #968D80;
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+}

@@ -22,6 +22,9 @@
 			font-size: 7px;
 		}
 	}
+	.page__title--name {
+		top: 150px;
+	}	
 }
 
 @media only screen and (max-width: 770px) {
@@ -67,6 +70,17 @@
 		p {
 			font-size: 11px;
 		}
+	}
+	.page__header {
+		height: 175px;
+		background-position: 50% 100%;
+		padding-top: 35px;
+	}
+	.page {
+		margin-top: -135px;
+	}
+	.page__header__logo {
+		display: none;
 	}
 }
 
@@ -165,5 +179,25 @@
 	}
 	.navbar-brand {
 		padding-left: 10px;
+	}
+	.page__header {
+		-webkit-background-size: contain;
+		     -o-background-size: contain;
+		        background-size: contain;
+		background-position: 50% 13%;
+	}
+	.page__title--name {
+		top: 25px;
+		h2 {
+			font-size: 20px;
+			margin-bottom: 0;
+		}
+		h4 {
+			font-size: 16px;
+			margin: 0;
+		}
+	}
+	.page__text--box {
+		padding-left: 15px;
 	}
 }
