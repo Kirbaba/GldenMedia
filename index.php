@@ -231,7 +231,8 @@
 <!--			</div>-->
 
 		</div>
-			<a href="#" class="news__more" data-page="2">ДРУГИЕ НОВОСТИ</a>
+<!--			<a href="#" class="news__more" data-page="2">ДРУГИЕ НОВОСТИ</a>-->
+			<a href="/category/news/" class="news__more" >ДРУГИЕ НОВОСТИ</a>
 	</section>
 
 	<section class="company">

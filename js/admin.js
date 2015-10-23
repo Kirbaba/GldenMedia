@@ -189,4 +189,20 @@ jQuery(document).ready(function ($) {
             });
         }
     });
+
+    //добавить изображение к новости
+    $(document).on('click', '.add-newsimg', function(){
+        $('.news-imgs').append('<div> ' +
+            '<img src="" style="width:200px" alt="" class="media"> ' +
+        '<button class="btn btn-info media-upload"><span class="glyphicon glyphicon-picture"> Выбрать изображение</span></button> ' +
+            '<button class="btn btn-danger media-delete"><span class="glyphicon glyphicon-trash"> Удалить изображение</span></button>'+
+        '<input type="hidden" class="media-img" name="extra[newsbg][]" value=""> ' +
+        '</div>');
+    });
+
+    $(document).on('click','.media-delete',function(){
+        $(this).parent().remove();
+        return false;
+    });
+
 });

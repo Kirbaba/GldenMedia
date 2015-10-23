@@ -472,11 +472,31 @@ function my_custom_init_artists()
 
 function my_extra_fields_artists()
 {
+    add_meta_box('extra_bg', 'Главное изображение', 'extra_fields_bg_func', 'artists', 'normal', 'high');
+    add_meta_box('extra_prof', 'Род деятельности', 'extra_fields_prof_func', 'artists', 'normal', 'high');
     add_meta_box('extra_fb', 'Facebook', 'extra_fields_fb_func', 'artists', 'normal', 'high');
     add_meta_box('extra_tw', 'Twitter', 'extra_fields_tw_func', 'artists', 'normal', 'high');
 }
 
 add_action('add_meta_boxes', 'my_extra_fields_artists', 1);
+
+function extra_fields_bg_func($post)
+{
+    ?>
+    <p><span>Главное изображение: </span> <div>
+            <img src="<?php echo get_post_meta($post->ID, "bg", 1); ?>" style='width:200px' alt="" class="media">
+            <button class="btn btn-info media-upload"><span class="glyphicon glyphicon-picture"> Выбрать изображение</span></button>
+            <input type="hidden" class="media-img" name='extra[bg]' value="<?php echo get_post_meta($post->ID, "bg", 1); ?>">
+        </div></p>
+    <?php
+}
+
+function extra_fields_prof_func($post)
+{
+    ?>
+    <p><span>Род деятельности: </span><input type='text' name='extra[prof]' value='<?php echo get_post_meta($post->ID, "prof", 1); ?>' style='width:50%'/></p>
+    <?php
+}
 
 function extra_fields_fb_func($post)
 {
@@ -640,6 +660,37 @@ add_action('wp_ajax_more_poster', 'poster_sc');
 /*----------------END POSTER------------------------------*/
 
 /*-------------------NEWS---------------------------------*/
+function extra_fields_newsbg_func($post)
+{
+    ?>
+    <div class="container">
+    <div class="row news-imgs">
+   <span>Дополнительные изображения: </span>
+    <?php
+        $newsbg = get_post_meta($post->ID, "newsbg", 1);
+        foreach($newsbg as $item){
+    ?>
+        <div>
+            <img src="<?php echo $item; ?>" style='width:200px' alt="" class="media">
+            <button class="btn btn-info media-upload"><span class="glyphicon glyphicon-picture"> Выбрать изображение</span></button>
+            <button class="btn btn-danger media-delete"><span class="glyphicon glyphicon-trash"> Удалить изображение</span></button>
+            <input type="hidden" class="media-img" name='extra[newsbg][]' value="<?php echo $item; ?>">
+        </div>
+
+    <?php } ?>
+    </div>
+    <div class="row">
+        <button class="btn btn-warning add-newsimg">Добавить изображение</button></div>
+    </div>
+    <?php
+}
+
+function my_extra_fields_news()
+{
+    add_meta_box('extra_newsbg', 'Изображения', 'extra_fields_newsbg_func', 'post', 'normal', 'high');
+}
+
+add_action('add_meta_boxes', 'my_extra_fields_news', 1);
 
 //вывод новостей на главной
 function news_sc(){

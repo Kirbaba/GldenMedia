@@ -19,12 +19,13 @@
 									<?php the_content(); ?>
 									<div class="single--gallery">
 										<div class="fotorama" data-width="100%" data-ratio="600/340" data-fit="cover" data-transition="slide" data-clicktransition="crossfade"  data-nav="thumbs" data-thumbheight="93" data-thumbwidth="160" data-loop="true">
-											<img src="<?php bloginfo('template_directory'); ?>/img/Layer-5.png" alt="">
-											<img src="<?php bloginfo('template_directory'); ?>/img/sati_bg.png" alt="">
-											<img src="<?php bloginfo('template_directory'); ?>/img/jjd.png" alt="">
-											<img src="<?php bloginfo('template_directory'); ?>/img/pozner.png" alt="">
-											<img src="<?php bloginfo('template_directory'); ?>/img/bg2-2.png" alt="">
-											<img src="<?php bloginfo('template_directory'); ?>/img/best.png" alt="">
+											<?php
+												$newsbg = get_post_meta(get_the_ID(), "newsbg", 1);
+												foreach($newsbg as $item){
+											?>
+												<img src="<?php echo $item; ?>"  alt="" >
+
+											<?php } ?>
 										</div>
 									</div>
 									<?php
@@ -38,8 +39,8 @@
 							<?php endwhile; ?>
 						<?php endif; ?>
 		                <div class="news__item--soc">
-		                    <a href="http://www.facebook.com/sharer.php?u=http://wp.web-artcraft.com/?p=106" target="_blank"><i class="fa fa-facebook"></i></a>
-		                    <a href="http://vk.com/share.php?url=http://wp.web-artcraft.com/?p=106" target="_blank"><i class="fa fa-vk"></i></a>
+		                    <a href="http://www.facebook.com/sharer.php?u=<?= get_the_permalink(get_the_ID()); ?>" target="_blank"><i class="fa fa-facebook"></i></a>
+		                    <a href="http://vk.com/share.php?url=<?= get_the_permalink(get_the_ID()); ?>" target="_blank"><i class="fa fa-vk"></i></a>
 		                </div>
 		            
 						

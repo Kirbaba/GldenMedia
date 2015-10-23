@@ -70,7 +70,7 @@ jQuery(document).ready(function(){
         });
         return false;
     });
-    jQuery(document).on('click', '.news__more', function(){
+    /*jQuery(document).on('click', '.news__more', function(){
         var num = jQuery(this).attr('data-page');
 
         jQuery.ajax({
@@ -84,7 +84,7 @@ jQuery(document).ready(function(){
             }
         });
         return false;
-    });
+    });*/
 
     //Контакт форм
     jQuery(document).on('click','.contacts--sub', function(){
