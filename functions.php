@@ -668,6 +668,7 @@ function extra_fields_newsbg_func($post)
    <span>Дополнительные изображения: </span>
     <?php
         $newsbg = get_post_meta($post->ID, "newsbg", 1);
+        if(!empty($newsbg[0])){
         foreach($newsbg as $item){
     ?>
         <div>
@@ -677,7 +678,7 @@ function extra_fields_newsbg_func($post)
             <input type="hidden" class="media-img" name='extra[newsbg][]' value="<?php echo $item; ?>">
         </div>
 
-    <?php } ?>
+    <?php }} ?>
     </div>
     <div class="row">
         <button class="btn btn-warning add-newsimg">Добавить изображение</button></div>

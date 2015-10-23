@@ -198,6 +198,7 @@ jQuery(document).ready(function ($) {
             '<button class="btn btn-danger media-delete"><span class="glyphicon glyphicon-trash"> Удалить изображение</span></button>'+
         '<input type="hidden" class="media-img" name="extra[newsbg][]" value=""> ' +
         '</div>');
+        return false;
     });
 
     $(document).on('click','.media-delete',function(){
