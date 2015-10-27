@@ -58,12 +58,12 @@
 		height: 38%;
 		width: 100%;
 		position: absolute;
-		bottom: -20%;
+		bottom: -19%;
 		background-image: url('../img/Shape-14.png');
 		background-repeat: no-repeat;
-		-webkit-background-size: contain;
-		     -o-background-size: contain;
-		        background-size: contain;
+		-webkit-background-size: cover;
+		     -o-background-size: cover;
+		        background-size: cover;
 		z-index: 150;
 		
 	}
@@ -79,6 +79,9 @@
 	background-position: 50% 50%;
 	padding-top: 75px;
 	position: relative;
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
 	z-index: 9;
 	&__logo {
 		position: relative;		

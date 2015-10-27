@@ -117,7 +117,10 @@
 	}
 
 	.header:after {
-		bottom: -25px;
+	    bottom: 40px;
+	    -webkit-background-size: contain;
+	         -o-background-size: contain;
+	            background-size: contain;
 	}
 
 	.fotorama__dot {

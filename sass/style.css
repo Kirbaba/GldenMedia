@@ -261,12 +261,12 @@ ul {
     height: 38%;
     width: 100%;
     position: absolute;
-    bottom: -20%;
+    bottom: -19%;
     background-image: url("../img/Shape-14.png");
     background-repeat: no-repeat;
-    -webkit-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     z-index: 150; }
 
 .page__header {
@@ -279,6 +279,9 @@ ul {
   background-position: 50% 50%;
   padding-top: 75px;
   position: relative;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   z-index: 9; }
   .page__header__logo {
     position: relative;
@@ -701,6 +704,7 @@ ul {
     .page__title img {
       position: relative;
       max-width: 100%;
+      width: 100%;
       height: auto;
       vertical-align: middle;
       z-index: 1; }
@@ -927,7 +931,10 @@ ul {
     margin-bottom: 5px; }
 
   .header:after {
-    bottom: -25px; }
+    bottom: 40px;
+    -webkit-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain; }
 
   .fotorama__dot {
     width: 20px; }
