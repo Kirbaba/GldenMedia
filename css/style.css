@@ -15,3 +15,19 @@
     height: 30%;
     overflow: auto;
 }
+
+.page__title img {
+    width: 100%;
+}
+
+.page__header {
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.header:after {
+    bottom: -19%!important;
+    -webkit-background-size: cover!important;
+    -o-background-size: cover!important;
+    background-size: cover!important;
+}
